@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+/* General rules */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+
+body {
+    background-color: white;
+    font-family: 'Amatic SC', cursive;
+    color: #3a3a3a;
+    text-align: center;
+}
+
+/* Logo */
+#logo-area {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#circle-frame {
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+#logo-img {
+    background: url('assets/images/global-citizen-logo.png') center center no-repeat;
+    height: 100%;
+    border-radius: 50%;
+}
