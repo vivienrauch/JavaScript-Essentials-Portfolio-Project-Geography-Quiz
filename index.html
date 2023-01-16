@@ -9,26 +9,34 @@
     <title>Global Citizen - The Ultimate Geography Quiz</title>
 </head>
 <body>
-    <header>
+    <!--Logo-->
+    <header id="heading-area">
         <div id="logo-area">
             <div id="circle-frame">
                 <div id="logo-img"></div>
             </div>
         </div>
     </header>
+    <!--Rules and user information-->
     <section id="rules-and-user">
         <div id="rules">
             <h2>Match the capital with the country!</h2>
         </div>
-        <div id="user-login">Username:</div>
-        <button>Start the game!</button>
+        <hr>
+        <div id="user-login"></div>
+            <label for="usernmane">Username:</label>
+            <input class="text-input" id="username" name="username" type="text" required>
+        <hr>
+            <input class="start-game" type="submit" value="Let's start!" name="start-game">
     </section>
+    <!--Game area-->
     <section id="game">
         <div class="questions"></div>
         <div class="answers"></div>
         <div class="scores"></div>
     </section>
- 
+    
+    <!--Social section-->
     <footer id="social">
         <ul class="social">
             <li>
