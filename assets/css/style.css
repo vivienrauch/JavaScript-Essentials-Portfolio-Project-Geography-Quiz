@@ -9,28 +9,30 @@
 
 
 body {
-    background-color: white;
+    background-color: #3a3a3a;
     font-family: 'Amatic SC', cursive;
-    color: #3a3a3a;
+    color: #fafafa;
     text-align: center;
 }
 
-/* Logo */
+/* Logo - inspired by the Love Running center image */
 #logo-area {
-    width: fit-content;
+    width: 30%;
+    height:fit-content;
     margin: 0 auto;
 }
 
 #circle-frame {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     padding: 30px;
     border-radius: 50%;
     margin: 0 auto;
 }
 
 #logo-img {
-    background: url('assets/images/global-citizen-logo.png') center center no-repeat;
+    background: url('../images/global-citizen-logo.png') center center;
+    background-size: contain;
     height: 100%;
     border-radius: 50%;
 }
