@@ -101,6 +101,22 @@ hr {
 
 /* Social Section */
 
-#social {
-    
+footer {
+    height: 100px;
+}
+
+.social > li {
+    display: inline;
+}
+
+.social a {
+    color: rgba(241, 234, 226, 0.8);
+    margin: 1%;
+    padding-top: 1%;
+    font-size: 150%;
+}
+
+.social a:hover{
+    color: #3a3a3a;
+    border-radius: 8%;
 }
