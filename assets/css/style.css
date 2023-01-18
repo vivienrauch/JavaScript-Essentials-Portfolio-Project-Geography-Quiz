@@ -9,7 +9,7 @@
 
 
 body {
-    background-color: #3a3a3a;
+    background-color: rgba(69, 47, 23, 0.8);
     font-family: 'Amatic SC', cursive;
     color: #fafafa;
     text-align: center;
@@ -39,3 +39,68 @@ body {
 
 /* Rules and User information */
 
+label {
+    font-size: 120%;
+}
+
+#rules-and-user {
+    height: 180px;
+
+}
+
+#rules {
+    font-size: 120%;
+    
+}
+
+#username {
+    font-size: 110%;
+    border-radius: 1%;
+}
+
+hr {
+    padding-bottom: 25px;
+}
+
+.start-game {
+    font-family: 'Amatic SC', cursive;
+    background-color: #fafafa;
+    color: #3a3a3a;
+    border-radius: 40px;
+    width: 80px;
+    font-size: 150%;  
+}
+
+.start-game:hover {
+    background-color: #f1eae2;
+}
+
+/* Game area */
+
+#game {
+    height: 600px;
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: url('../images/pexels-photo-414916.jpeg') center center no-repeat;
+    background-size: cover;
+}
+
+.game-frame {
+    width: 33%;
+    height: 80%;
+    margin: 0 auto;
+    position: relative;
+    
+    background-color:rgba(241, 234, 226, 0.8);;
+    border-radius: 1%;
+    font-size: 120%;
+    color: #3a3a3a;
+}
+
+/* Social Section */
+
+#social {
+    
+}
