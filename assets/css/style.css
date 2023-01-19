@@ -9,7 +9,7 @@
 
 
 body {
-    background-color: rgba(69, 47, 23, 0.8);
+    background-color: #541404;
     font-family: 'Amatic SC', cursive;
     color: #fafafa;
     text-align: center;
@@ -73,11 +73,11 @@ hr {
     border-radius: 40px;
     width: 80px;
     height: 50px;
-    font-size: 120%;  
+    font-size: 120%;
 }
 
 .start-game:hover {
-    background-color: #3a3a3a;
+    background-color: #05555f;
     color: #fafafa;
     cursor: pointer;
 }
@@ -96,7 +96,7 @@ hr {
 
 .game-frame {
     width: 33%;
-    height: 80%;
+    height: 88%;
     margin: 0 auto;
     position: relative;
     
@@ -109,16 +109,22 @@ hr {
 .questions {
     width: 85%;
     height: 10%;
-    background-color: rgba(69, 47, 23, 0.7);
+    background-color: #05555f;
     border-radius: 1%;
     margin-top: 25px;
     margin-left: 32px;
+    font-family: 'Cinzel', serif;
+    color: #fafafa;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .answers-container {
     width: 85%;
     height: 55%;
-    background-color: rgba(69, 47, 23, 0.7);
+    background-color: #05555f;
     border-radius: 1%;
     margin-top: 35px;
     margin-left: 32px;
@@ -132,7 +138,6 @@ hr {
 .answers {
     display: flex;
     align-items: center;
-    justify-content: center;
     background-color: rgba(241, 234, 226, 0.8);
     width: 90%;
     height: 15%;
@@ -144,10 +149,22 @@ hr {
     margin-top: 0px;
 }
 
+
+.answer-text {
+    font-family: 'Cinzel', serif;
+}
+
+.answer-prefix {
+    padding-left: 15px;
+    padding-right: 25px;
+    font-family: 'Cinzel', serif;
+}
+
+
 .scores {
     width: 85%;
     height: 10%;
-    background-color: rgba(69, 47, 23, 0.7);
+    background-color: #05555f;
     border-radius: 1%;
     margin-top: 35px;
     margin-left: 32px;
