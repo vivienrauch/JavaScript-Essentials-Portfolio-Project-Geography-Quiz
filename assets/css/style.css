@@ -23,18 +23,26 @@ body {
 }
 
 #circle-frame {
-    width: 250px;
-    height: 250px;
+    width: 220px;
+    height: 220px;
     padding: 30px;
     border-radius: 50%;
     margin: 0 auto;
 }
+
 
 #logo-img {
     background: url('../images/global-citizen-logo.png') center center;
     background-size: contain;
     height: 100%;
     border-radius: 50%;
+}
+
+#logo-img:hover {
+    box-shadow: 0 0.2rem 1.2rem 0;
+    transform: scale(1.02);
+    transform: transform 100ms;
+    cursor: pointer;
 }
 
 /* Rules and User information */
@@ -54,12 +62,12 @@ label {
 }
 
 #user-login {
-    font-size: 150%;
+    font-family: 'Cinzel', serif;
 }
 
 #username {
-    font-size: 150%;
     border-radius: 1%;
+    font-size: 130%;
 }
 
 hr {
@@ -80,13 +88,16 @@ hr {
     background-color: #05555f;
     color: #fafafa;
     cursor: pointer;
+    box-shadow: 0 0.1rem 1.1rem 0;
+    transform: scale(1.01);
+    transform: transform 100ms;
 }
 
 /* Game area */
 
 #game {
     height: 600px;
-    margin-top: 5px;
+    margin-top: 18px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -145,6 +156,13 @@ hr {
     margin-top: 25px;
 }
 
+.answers:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 #05555f;
+    transform: scale(1.02);
+    transform: transform 100ms; /* Transform code inspired by a Youtube tutorial: https://www.youtube.com/watch?v=f4fB9Xg2JEY */
+}
+
 #answer-one {
     margin-top: 0px;
 }
@@ -194,6 +212,5 @@ footer {
 }
 
 .social a:hover{
-    color: #3a3a3a;
-    border-radius: 8%;
+    color: #05555f;
 }

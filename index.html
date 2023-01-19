@@ -23,17 +23,18 @@
             <h2>Match the capital with the country!</h2>
         </div>
         <hr>
-        <div id="user-login"></div>
-            <label for="username">Username:</label>
+        <div id="user-login">
+            <label for="username">Name:</label>
             <input class="text-input" id="username" name="username" type="text" required>
         <hr>
             <input class="start-game" type="submit" value="Start" name="start-game">
+        </div>
         <hr>
     </section>
     <!--Game area-->
     <section id="game">
         <div class="game-frame">
-            <div class="questions">What is the capital of...?</div>
+            <div class="questions" id="question">What is the capital of...?</div>
             <div class="answers-container">
                 <div id="answer-one" class="answers">
                     <p class="answer-prefix"><strong>A)</strong></p>
@@ -52,7 +53,7 @@
                     <p class="answer-text" data-number="4">Answer 4</p>
                 </div>
             </div>
-            <div class="scores"></div>
+            <div class="questions" id="scores">0/10</div>
         </div>
     </section>
     
