@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cinzel&display=swap');
 
 /* General rules */
 * {
@@ -49,12 +49,16 @@ label {
 }
 
 #rules {
-    font-size: 120%;
+    font-size: 150%;
     
 }
 
+#user-login {
+    font-size: 150%;
+}
+
 #username {
-    font-size: 110%;
+    font-size: 150%;
     border-radius: 1%;
 }
 
@@ -63,16 +67,19 @@ hr {
 }
 
 .start-game {
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Cinzel', serif;
     background-color: #fafafa;
     color: #3a3a3a;
     border-radius: 40px;
     width: 80px;
-    font-size: 150%;  
+    height: 50px;
+    font-size: 120%;  
 }
 
 .start-game:hover {
-    background-color: #f1eae2;
+    background-color: #3a3a3a;
+    color: #fafafa;
+    cursor: pointer;
 }
 
 /* Game area */
@@ -99,10 +106,63 @@ hr {
     color: #3a3a3a;
 }
 
+.questions {
+    width: 85%;
+    height: 10%;
+    background-color: rgba(69, 47, 23, 0.7);
+    border-radius: 1%;
+    margin-top: 25px;
+    margin-left: 32px;
+}
+
+.answers-container {
+    width: 85%;
+    height: 55%;
+    background-color: rgba(69, 47, 23, 0.7);
+    border-radius: 1%;
+    margin-top: 35px;
+    margin-left: 32px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.answers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(241, 234, 226, 0.8);
+    width: 90%;
+    height: 15%;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+
+#answer-one {
+    margin-top: 0px;
+}
+
+.scores {
+    width: 85%;
+    height: 10%;
+    background-color: rgba(69, 47, 23, 0.7);
+    border-radius: 1%;
+    margin-top: 35px;
+    margin-left: 32px;
+}
+
 /* Social Section */
 
 footer {
-    height: 100px;
+    height: fit-content;
+}
+
+.social {
+    text-align: center;
+    margin: 25px;
+    list-style-type: none;
 }
 
 .social > li {
