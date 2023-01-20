@@ -200,12 +200,68 @@ let questions = [
 /** functions:
  * say hello to the player when they enter their name + press enter or click the start button
  * show only one question at a time
+ * only one click allowed
  * highlight the background with green if it's correct and with red if it's incorrect 
  * add a next question icon
  * increment the score if the answer is correct
  * logo resets game and scores
  * alert/pop-up window at the end with the total scores + message
  */
+
+document.addEventListener("DOMContentLoaded", function() {
+   
+    let startButton = document.getElementsByClassName('start-game');
+
+    for (let button of startButton) {
+        button.addEventListener('click', function() {
+                helloPlayer();
+                startGame();
+        })
+    }
+
+    document.getElementById('username').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            helloPlayer();
+            startGame();
+        }
+    })
+
+
+    let nextButton = document.getElementById('next-question');
+
+    for (let button of nextButton) {
+        button.addEventListener('click', function () {
+                nextQuestion();
+        })
+    }
+
+})
+
+function helloPlayer () {
+    let username = document.getElementById('username');
+    if (username.value == "") {
+        alert('Please enter your name to start the game!');
+        return false;
+    } else {
+        let userLogin = document.getElementById('user-login');
+        userLogin.style.visibility = 'hidden';
+        let welcomeMessage = document.getElementById('hidden-welcome');
+        welcomeMessage.innerHTML = `Welcome ${username.value} ! Let's play!`
+    }
+}
+
+function startGame() {
+
+}
+
+function nextQuestion() {
+
+}
+
+function checkAnswer() {
+
+}
+
 
 
 

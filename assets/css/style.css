@@ -93,6 +93,12 @@ hr {
     transform: transform 100ms;
 }
 
+#hidden-welcome {
+    font-family: 'Cinzel', serif;
+    font-size: 110%;
+    color: #fafafa;
+}
+
 /* Game area */
 
 #game {
