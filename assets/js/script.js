@@ -197,6 +197,15 @@ let questions = [
 
 let answerText = document.getElementsByClassName('answer-text');
 
+/** functions:
+ * say hello to the player when they enter their name + press enter or click the start button
+ * show only one question at a time
+ * highlight the background with green if it's correct and with red if it's incorrect 
+ * add a next question icon
+ * increment the score if the answer is correct
+ * logo resets game and scores
+ * alert/pop-up window at the end with the total scores + message
+ */
 
 /*function showQuestions () {
 
