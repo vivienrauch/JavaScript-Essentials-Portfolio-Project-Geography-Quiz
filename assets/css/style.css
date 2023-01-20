@@ -132,6 +132,10 @@ hr {
     justify-content: center;
 }
 
+.radio {
+    visibility: hidden;
+}
+
 .answers-container {
     width: 85%;
     height: 55%;
@@ -171,13 +175,6 @@ hr {
 .answer-text {
     font-family: 'Cinzel', serif;
 }
-
-.answer-prefix {
-    padding-left: 15px;
-    padding-right: 25px;
-    font-family: 'Cinzel', serif;
-}
-
 
 .scores {
     width: 85%;

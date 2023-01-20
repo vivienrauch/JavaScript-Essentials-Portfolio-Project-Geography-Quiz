@@ -1,132 +1,214 @@
-let question = document.getElementById('question');
-let answers = Array.from(document.getElementsByClassName('answer-text'));
-let scores = document.getElementById('scores');
-
-let currentQuestion = {};
-let acceptAnswer = true;
-let score = 0;
-let questionCount = 0;
-let availableQuestions = [];
-
 let questions = [
     {
         question: 'What is the capital of Malawi?',
-        answer1 : 'Nairobi',
-        answer2 : 'Maputo',
-        answer3 : 'Lilongwe',
-        answer4 : 'Lusaka',
-        answer: 'Lilongwe',
+        answers: {
+
+            a : 'Nairobi',
+            b : 'Maputo',
+            c : 'Lilongwe',
+            d : 'Lusaka'
+        },
+        
+        correctAnswer: 'd'
     },
+
     {
         question: 'Manila is the capital of...',
-        answer1 : 'Philippines',
-        answer2 : 'Afghanistan',
-        answer3 : 'Andorra',
-        answer4 : 'Mozambique',
-        answer: 'Philippines',
+        answers: {
+
+            a : 'Philippines',
+            b : 'Afghanistan',
+            c : 'Andorra',
+            d : 'Mozambique'
+        },
+
+        correctAnswer: 'a'
     },
+
     {
         question: 'Vientiane is the capital of...',
-        answer1 : 'Thailand',
-        answer2 : 'Vietnam',
-        answer3 : 'Laos',
-        answer4 : 'Taiwan',
-        answer: 'Laos',
+        answers: {
+
+            a : 'Thailand',
+            b : 'Vietnam',
+            c : 'Laos',
+            d : 'Taiwan'
+        },
+
+        correctAnswer: 'c'
     },
+
     {
         question: 'What is the capital of Albania?',
-        answer1 : 'Bishkek',
-        answer2 : 'Sarajevo',
-        answer3 : 'Minsk',
-        answer4 : 'Tirana',
-        answer: 'Tirana',
+        answers: {
+
+            a : 'Bishkek',
+            b : 'Sarajevo',
+            c : 'Minsk',
+            d : 'Tirana'
+        },
+
+        correctAnswer: 'd'
     },
+
     {
         question: 'What is the capital of Chile?',
-        answer1 : 'Lima',
-        answer2 : 'Santiago',
-        answer3 : 'Caracas',
-        answer4 : 'Quito',
-        answer: 'Santiago',
+        answers: {
+
+            a : 'Lima',
+            b : 'Santiago',
+            c : 'Caracas',
+            d : 'Quito'
+        },
+
+        answer: 'b'
     },
+
     {
         question: 'Montevideo is the capital of...',
-        answer1 : 'Cuba',
-        answer2 : 'Hawaii',
-        answer3 : 'Uruguay',
-        answer4 : 'Paraguay',
-        answer: 'Uruguay',
+        answers: {
+
+            a : 'Cuba',
+            b : 'Hawaii',
+            c : 'Uruguay',
+            d : 'Paraguay'
+        },
+
+        correctAnswer: 'c'
     },
+
     {
         question: 'What is the capital of Colombia?',
-        answer1 : 'Buenos Aires',
-        answer2 : 'Paramaribo',
-        answer3 : 'Bogotá',
-        answer4 : 'La Paz',
-        answer: 'Bogotá',
+        answers: {
+
+            a : 'Buenos Aires',
+            b : 'Paramaribo',
+            c : 'Bogotá',
+            d : 'La Paz'
+        },
+        
+        correctAnswer: 'c'
     },
+
     {
         question: 'Budapest is the capital of...',
-        answer1 : 'Romania',
-        answer2 : 'Iceland',
-        answer3 : 'Slovakia',
-        answer4 : 'Hungary',
-        answer: 'Hungary',
+        answers: {
+
+            a : 'Romania',
+            b : 'Iceland',
+            c : 'Slovakia',
+            d : 'Hungary'
+        },
+
+        correctAnswer: 'd'
     },
+
     {
         question: 'What is the capital of Latvia?',
-        answer1 : 'Tallinn',
-        answer2 : 'Riga',
-        answer3 : 'Vilnius',
-        answer4 : 'Oslo',
-        answer: 'Riga',
+        answers: {
+
+            a : 'Tallinn',
+            b : 'Riga',
+            c : 'Vilnius',
+            d : 'Oslo'
+        },
+
+        correctAnswer: 'b'
     },
+
     {
         question: 'What is the capital of Belgium?',
-        answer1 : 'Brussels',
-        answer2 : 'Bern',
-        answer3 : 'Berlin',
-        answer4 : 'Bonn',
-        answer: 'Brussels',
+        answers: {
+
+            a : 'Brussels',
+            b : 'Bern',
+            c : 'Berlin',
+            d : 'Bonn'
+        },
+
+        correctAnswer: 'a'
     },
+
     {
         question: 'Jerusalem is the capital of...',
-        answer1 : 'Egypt',
-        answer2 : 'Jordan',
-        answer3 : 'Israel',
-        answer4 : 'Lebanon',
-        answer: 'Israel',
+        answers: {
+
+            a : 'Egypt',
+            b : 'Jordan',
+            c : 'Israel',
+            d : 'Lebanon'
+        },
+
+        correctAnswer: 'c'
     },
+
     {
         question: 'What is the capital of Sweden?',
-        answer1 : 'Malmö',
-        answer2 : 'Göteborg',
-        answer3 : 'Uppsala',
-        answer4 : 'Stockholm',
-        answer: 'Stockholm',
+        answers: {
+
+            a : 'Malmö',
+            b : 'Göteborg',
+            c : 'Uppsala',
+            d : 'Stockholm'
+        },
+
+        correctAnswer: 'd'
     },
+
     {
         question: 'What is the capital of New Zealand?',
-        answer1 : 'Canberra',
-        answer2 : 'Wellington',
-        answer3 : 'Ottawa',
-        answer4 : 'Brisbane',
-        answer: 'Wellington',
+        answers: {
+
+            a : 'Canberra',
+            b : 'Wellington',
+            c : 'Ottawa',
+            d : 'Brisbane'
+        },
+
+        correctAnswer: 'b'
     },
+
     {
         question: 'Canberra is the capital of...',
-        answer1 : 'Monaco',
-        answer2 : 'Lichtenstein',
-        answer3 : 'Australia',
-        answer4 : 'Croatia',
-        answer: 'Australia',
+        answers: {
+
+            a : 'Monaco',
+            b : 'Lichtenstein',
+            c : 'Australia',
+            d : 'Croatia'
+        },
+
+        correctAnswer: 'c'
     },
+
     {
         question: 'Yaoundé is the capital of...',
-        answer1 : 'Mali',
-        answer2 : 'Ghana',
-        answer3 : 'Congo',
-        answer4 : 'Cameroon',
-        answer: 'Cameroon',
+        answers: {
+
+            a : 'Mali',
+            b : 'Ghana',
+            c : 'Congo',
+            d : 'Cameroon'
+        },
+
+        correctAnswer: 'd'
     },
 ]
+
+let answerText = document.getElementsByClassName('answer-text');
+
+
+/*function showQuestions () {
+
+    let output = [];
+    let answers;
+
+    for (let i = 0; i < questions.length; i++) {
+        answers = [];
+
+        for (letter in questions[i].answers){
+
+        }
+    }
+
+}*/
