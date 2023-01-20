@@ -132,10 +132,6 @@ hr {
     justify-content: center;
 }
 
-.radio {
-    visibility: hidden;
-}
-
 .answers-container {
     width: 85%;
     height: 55%;
@@ -177,12 +173,30 @@ hr {
 }
 
 .scores {
-    width: 85%;
+    width: 77%;
     height: 10%;
     background-color: #05555f;
     border-radius: 1%;
-    margin-top: 35px;
+    margin-top: 25px;
     margin-left: 32px;
+    font-family: 'Cinzel', serif;
+    color: #fafafa;
+    font-size: 120%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#next-question {
+    cursor: pointer;
+}
+
+#next-question:hover {
+    transform: scale(1.11);
+    transform: transform 100ms;
 }
 
 /* Social Section */
@@ -210,4 +224,6 @@ footer {
 
 .social a:hover{
     color: #05555f;
+    transform: scale(1.11);
+    transform: transform 100ms;
 }

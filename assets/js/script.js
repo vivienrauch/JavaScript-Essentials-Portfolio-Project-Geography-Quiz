@@ -195,7 +195,7 @@ let questions = [
     },
 ]
 
-let answerText = document.getElementsByClassName('answer-text');
+
 
 /** functions:
  * say hello to the player when they enter their name + press enter or click the start button
@@ -206,6 +206,9 @@ let answerText = document.getElementsByClassName('answer-text');
  * logo resets game and scores
  * alert/pop-up window at the end with the total scores + message
  */
+
+
+
 
 /*function showQuestions () {
 
