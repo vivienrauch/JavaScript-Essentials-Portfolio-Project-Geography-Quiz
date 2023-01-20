@@ -95,8 +95,9 @@ hr {
 
 #hidden-welcome {
     font-family: 'Cinzel', serif;
-    font-size: 110%;
+    font-size: 130%;
     color: #fafafa;
+    position: relative;
 }
 
 /* Game area */
