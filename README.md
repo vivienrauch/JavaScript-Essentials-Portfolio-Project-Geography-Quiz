@@ -88,6 +88,7 @@ You can get up and running by:
     - [Balsamiq](https://balsamiq.com/) for creating a wireframe mockup
     - [Pexels](https.//pexels.com/) for the images
     - [Font Awesome](https://fontawesome.com/) for the icons used throughout the site
+    - [Box Shadow Generator](https://cssgenerator.org/box-shadow-css-generator.html) for adding dynamics to the buttons
 
 # **Deployment** - *Surface plane*
 
@@ -103,5 +104,6 @@ I deployed the site to GitHub pages and the steps were the following:
 - The project in part relies on the methods learnt through the [Love Maths Walkthrough Project](https://github.com/vivienrauch/love-maths)
 - The list of sites and Youtube videos I used to clarify the way to build a multiple choice quiz game (I borrowed some code here and there but they are heavily personalized and also indicated in the files):
     - https://www.youtube.com/watch?v=f4fB9Xg2JEY
+    - https://www.youtube.com/watch?v=49pYIMygIcU
     - https://www.youtube.com/watch?v=WHHYz8rZmDU
     - https://gamedevacademy.org/javascript-quiz-tutorial/
