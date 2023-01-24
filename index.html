@@ -29,18 +29,23 @@
             <input class="text-input" id="username" name="username" type="text" required>
         <hr>
             <input class="start-game" type="submit" value="Start" name="start-game">
-        </div>  
-        <hr>
-    </section>
-    <section id="rules-panel">
-        <div>
-            <h3>Rules</h3>
-            <p></p>
         </div>
     </section>
-    <!--Game area-->
-    <section id="game-panel">
-        <div class="game-frame">
+    <!--Rules, game & results area-->
+    <section id="game-panel" class="hide">
+        <section id="rules-panel">
+            <div>
+                <h2>Rules</h2>
+                <hr>
+                <p id="rules-text">
+                This geography quiz focuses on countries and their capitals all across the globe.
+                You'll get either a country or a capital in the question and you will have four options to chose from.
+                Enjoy and learn! 
+                <i class="fa-solid fa-earth-americas"></i>
+                </p>
+            </div>
+        </section>
+        <div id="game-frame" class="hide">
             <div class="questions" id="question"></div>
             <div class="answers-container">
                 <div class="answers" id="answer-one">
@@ -61,11 +66,10 @@
                 <p id="next-question"> <i class="fa-solid fa-chevron-right"></i></p>
             </div>
         </div>
-    </section>
-    <section id="results-panel">
-        <p></p>
-    </section>
-    
+        <section id="results-panel" class="hide">
+            <p></p>
+        </section>
+    </section>    
     <!--Social section-->
     <footer id="social">
         <ul class="social">
