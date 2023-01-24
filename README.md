@@ -57,6 +57,8 @@ I imported them from [Google Fonts](https://fonts.google.com/).
 
 ## **Fixed Bugs**
 
+    The game didn't start when a username is entered.
+
 **Fix**:
 
 ## **Unfixed Bugs**

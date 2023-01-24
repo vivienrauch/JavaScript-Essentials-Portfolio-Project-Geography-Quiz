@@ -1,4 +1,4 @@
-let questions = [
+const questions = [
     {
         question : 'What is the capital of Malawi?',
         choiceA : 'Nairobi',

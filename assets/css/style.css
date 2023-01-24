@@ -51,12 +51,12 @@ label {
     font-size: 120%;
 }
 
-#rules-and-user {
+#intro-user {
     height: 180px;
 
 }
 
-#rules {
+#intro {
     font-size: 150%;
     
 }
@@ -102,7 +102,7 @@ hr {
 
 /* Game area */
 
-#game {
+#game-panel {
     height: 600px;
     margin-top: 18px;
     width: 100%;
