@@ -98,6 +98,7 @@ hr {
     font-size: 130%;
     color: #fafafa;
     position: relative;
+    top: 35px;
 }
 
 .hide {
@@ -234,6 +235,21 @@ hr {
 #next-question:hover {
     transform: scale(1.11);
     transform: transform 100ms;
+}
+
+/* Results area */
+
+#results-panel {
+    width: 33%;
+    height: 88%;
+    margin: 0 auto;
+    position: relative;
+    
+    background-color:rgba(241, 234, 226, 0.8);;
+    border-radius: 1%;
+    font-size: 120%;
+    color: #3a3a3a;
+    display: flex;
 }
 
 /* Social Section */
