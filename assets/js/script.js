@@ -532,7 +532,11 @@ function startGame() {
     let runningQ = 0;
     let q = questions[runningQ];
 
-    question.innerHTML = questions[runningQ].;
+    question.innerHTML = questions[runningQ].question[0];
+    choiceA.innerHTML = questions[runningQ].choiceA[0];
+    choiceB.innerHTML = questions[runningQ].choiceB[0];
+    choiceC.innerHTML = questions[runningQ].choiceC[0];
+    choiceD.innerHTML = questions[runningQ].choiceD[0];
 }
 
 /** Greets the player and starts the game when they enter a usernamename.
