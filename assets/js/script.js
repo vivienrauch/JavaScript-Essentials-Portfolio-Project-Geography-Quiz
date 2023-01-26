@@ -13,144 +13,7 @@
 /* Load page and add listeners for clicking the start and next buttons or pressing Enter. */
 /* Adding variables */
 
-/*const questions = [
-    {
-        question : 'What is the capital of Malawi?',
-        choiceA : 'Nairobi',
-        choiceB : 'Maputo',
-        choiceC : 'Lilongwe',
-        choiceD : 'Lusaka',
-        correctAnswer: 'd'
-    },
-
-    {
-        question : 'Manila is the capital of...',
-        choiceA : 'Philippines',
-        choiceB : 'Afghanistan',
-        choiceC : 'Andorra',
-        choiceD : 'Mozambique',
-        correctAnswer: 'a'
-    },
-
-    {
-        question : 'Vientiane is the capital of...',
-        choiceA : 'Thailand',
-        chocieB : 'Vietnam',
-        choiceC : 'Laos',
-        choiceD : 'Taiwan',
-        correctAnswer : 'c'
-    },
-
-    {
-        question : 'What is the capital of Albania?',
-        chocieA : 'Bishkek',
-        choiceB : 'Sarajevo',
-        choiceC : 'Minsk',
-        choiceD : 'Tirana',
-        correctAnswer: 'd'
-    },
-
-    {
-        question : 'What is the capital of Chile?',
-        chocieA : 'Lima',
-        choiceB : 'Santiago',
-        choiceC : 'Caracas',
-        choiceD : 'Quito',
-        correctAnswer : 'b'
-    },
-
-    {
-        question : 'Montevideo is the capital of...',
-        choiceA : 'Cuba',
-        choiceB : 'Hawaii',
-        choiceC : 'Uruguay',
-        choiceD : 'Paraguay',
-        correctAnswer : 'c'
-    },
-
-    {
-        question : 'What is the capital of Colombia?',
-        choiceA : 'Buenos Aires',
-        choiceB : 'Paramaribo',
-        choiceC : 'Bogotá',
-        choiceD : 'La Paz',
-        correctAnswer: 'c'
-    },
-
-    {
-        question : 'Budapest is the capital of...',
-        choiceA : 'Romania',
-        choiceB : 'Iceland',
-        choiceC : 'Slovakia',
-        choiceD : 'Hungary',
-        correctAnswer : 'd'
-    },
-
-    {
-        question : 'What is the capital of Latvia?',
-        choiceA : 'Tallinn',
-        choiceB : 'Riga',
-        choiceC : 'Vilnius',
-        choiceD : 'Oslo',
-        correctAnswer : 'b'
-    },
-
-    {
-        question : 'What is the capital of Belgium?',
-        choiceA : 'Brussels',
-        choiceB : 'Bern',
-        choiceC : 'Berlin',
-        choiceD : 'Bonn',
-        correctAnswer : 'a'
-    },
-
-    {
-        question : 'Jerusalem is the capital of...',
-        choiceA : 'Egypt',
-        choiceB : 'Jordan',
-        choiceC : 'Israel',
-        choiceD : 'Lebanon',
-        correctAnswer : 'c'
-    },
-
-    {
-        question : 'What is the capital of Sweden?',
-        choiceA : 'Malmö',
-        choiceB : 'Göteborg',
-        choiceC : 'Uppsala',
-        choiceD : 'Stockholm',
-        correctAnswer : 'd'
-    },
-
-    {
-        question : 'What is the capital of New Zealand?',
-        choiceA : 'Canberra',
-        choiceB : 'Wellington',
-        choiceC : 'Ottawa',
-        choiceD : 'Brisbane',
-        correctAnswer : 'b'
-    },
-
-    {
-        question : 'Canberra is the capital of...',
-        choiceA : 'Monaco',
-        choiceB : 'Lichtenstein',
-        choiceC : 'Australia',
-        choiceD : 'Croatia',
-        correctAnswer : 'c'
-    },
-
-    {
-        question : 'Yaoundé is the capital of...',
-        choiceA : 'Mali',
-        choiceB : 'Ghana',
-        choiceC : 'Congo',
-        choiceD : 'Cameroon',
-        correctAnswer : 'd'
-    },
-];
-
-let question = document.addElementById('question');
+/*let question = document.addElementById('question');
 let choiceA = document.getElementById('choiceA');
 let choiceB = document.getElementById('choiceB');
 let choiceC = document.getElementById('choiceC');
@@ -160,11 +23,7 @@ let quiz = document.getElementById('game-frame');
 let username = document.getElementById('username');
 let rules = document.getElementById('rules-panel');
 let results = document.getElementById('results-panel');*/
-    
-/*rules.style.visibility = 'visible';
 
-let lastQuestion = questions.length-1;
-let runningQ = 0;*/
 
  document.addEventListener('DOMContentLoaded', function() {
     let startButton = document.getElementsByClassName('start-game');
@@ -187,7 +46,6 @@ let runningQ = 0;*/
         }
     })
 
-
     let nextButton = document.getElementById('next-question');
 
     for (let button of nextButton) {
@@ -195,171 +53,6 @@ let runningQ = 0;*/
                 nextQuestion();
         })
     }
-
-
-
-/* Renders questions */
-
-/*function renderQuestion() {
-
-    rules.style.display = 'none';
-    let quiz = document.getElementById('game-frame');
-    quiz.classList.remove('hide');
-
-    const questions = [
-        {
-            question : 'What is the capital of Malawi?',
-            choiceA : 'Nairobi',
-            choiceB : 'Maputo',
-            choiceC : 'Lilongwe',
-            choiceD : 'Lusaka',
-            correctAnswer: 'd'
-        },
-    
-        {
-            question : 'Manila is the capital of...',
-            choiceA : 'Philippines',
-            choiceB : 'Afghanistan',
-            choiceC : 'Andorra',
-            choiceD : 'Mozambique',
-            correctAnswer: 'a'
-        },
-    
-        {
-            question : 'Vientiane is the capital of...',
-            choiceA : 'Thailand',
-            chocieB : 'Vietnam',
-            choiceC : 'Laos',
-            choiceD : 'Taiwan',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Albania?',
-            chocieA : 'Bishkek',
-            choiceB : 'Sarajevo',
-            choiceC : 'Minsk',
-            choiceD : 'Tirana',
-            correctAnswer: 'd'
-        },
-    
-        {
-            question : 'What is the capital of Chile?',
-            chocieA : 'Lima',
-            choiceB : 'Santiago',
-            choiceC : 'Caracas',
-            choiceD : 'Quito',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'Montevideo is the capital of...',
-            choiceA : 'Cuba',
-            choiceB : 'Hawaii',
-            choiceC : 'Uruguay',
-            choiceD : 'Paraguay',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Colombia?',
-            choiceA : 'Buenos Aires',
-            choiceB : 'Paramaribo',
-            choiceC : 'Bogotá',
-            choiceD : 'La Paz',
-            correctAnswer: 'c'
-        },
-    
-        {
-            question : 'Budapest is the capital of...',
-            choiceA : 'Romania',
-            choiceB : 'Iceland',
-            choiceC : 'Slovakia',
-            choiceD : 'Hungary',
-            correctAnswer : 'd'
-        },
-    
-        {
-            question : 'What is the capital of Latvia?',
-            choiceA : 'Tallinn',
-            choiceB : 'Riga',
-            choiceC : 'Vilnius',
-            choiceD : 'Oslo',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'What is the capital of Belgium?',
-            choiceA : 'Brussels',
-            choiceB : 'Bern',
-            choiceC : 'Berlin',
-            choiceD : 'Bonn',
-            correctAnswer : 'a'
-        },
-    
-        {
-            question : 'Jerusalem is the capital of...',
-            choiceA : 'Egypt',
-            choiceB : 'Jordan',
-            choiceC : 'Israel',
-            choiceD : 'Lebanon',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Sweden?',
-            choiceA : 'Malmö',
-            choiceB : 'Göteborg',
-            choiceC : 'Uppsala',
-            choiceD : 'Stockholm',
-            correctAnswer : 'd'
-        },
-    
-        {
-            question : 'What is the capital of New Zealand?',
-            choiceA : 'Canberra',
-            choiceB : 'Wellington',
-            choiceC : 'Ottawa',
-            choiceD : 'Brisbane',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'Canberra is the capital of...',
-            choiceA : 'Monaco',
-            choiceB : 'Lichtenstein',
-            choiceC : 'Australia',
-            choiceD : 'Croatia',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'Yaoundé is the capital of...',
-            choiceA : 'Mali',
-            choiceB : 'Ghana',
-            choiceC : 'Congo',
-            choiceD : 'Cameroon',
-            correctAnswer : 'd'
-        },
-    ];
-    
-    let question = document.addElementById('question');
-    let choiceA = document.getElementById('choiceA');
-    let choiceB = document.getElementById('choiceB');
-    let choiceC = document.getElementById('choiceC');
-    let choiceD = document.getElementById('choiceD');
-        
-    let runningQ = 0;
-    let q = questions[runningQ];
-
-    for (i = 0; i <= questions.length; i++) {
-    question.innerHTML = '<p>' + q.question[i] + '</p>';
-    choiceA.innerHTML = q.choiceA[i];
-    choiceB.innerHTML = q.choiceB[i];
-    choiceC.innerHTML = q.choiceC[i];
-    choiceD.innerHTML = q.choiceD[i];
-    }
-};*/
 
 /** Greets the player and starts the game when they enter a usernamename.
  * Gives an alert if no name is entered and not going to proceed to the game.*/
@@ -386,165 +79,10 @@ function helloPlayer () {
 }
  }) 
 
-
-/*function startGame() {
-
-    const questions = [
-        {
-            question : 'What is the capital of Malawi?',
-            choiceA : 'Nairobi',
-            choiceB : 'Maputo',
-            choiceC : 'Lilongwe',
-            choiceD : 'Lusaka',
-            correctAnswer: 'd'
-        },
-    
-        {
-            question : 'Manila is the capital of...',
-            choiceA : 'Philippines',
-            choiceB : 'Afghanistan',
-            choiceC : 'Andorra',
-            choiceD : 'Mozambique',
-            correctAnswer: 'a'
-        },
-    
-        {
-            question : 'Vientiane is the capital of...',
-            choiceA : 'Thailand',
-            chocieB : 'Vietnam',
-            choiceC : 'Laos',
-            choiceD : 'Taiwan',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Albania?',
-            chocieA : 'Bishkek',
-            choiceB : 'Sarajevo',
-            choiceC : 'Minsk',
-            choiceD : 'Tirana',
-            correctAnswer: 'd'
-        },
-    
-        {
-            question : 'What is the capital of Chile?',
-            chocieA : 'Lima',
-            choiceB : 'Santiago',
-            choiceC : 'Caracas',
-            choiceD : 'Quito',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'Montevideo is the capital of...',
-            choiceA : 'Cuba',
-            choiceB : 'Hawaii',
-            choiceC : 'Uruguay',
-            choiceD : 'Paraguay',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Colombia?',
-            choiceA : 'Buenos Aires',
-            choiceB : 'Paramaribo',
-            choiceC : 'Bogotá',
-            choiceD : 'La Paz',
-            correctAnswer: 'c'
-        },
-    
-        {
-            question : 'Budapest is the capital of...',
-            choiceA : 'Romania',
-            choiceB : 'Iceland',
-            choiceC : 'Slovakia',
-            choiceD : 'Hungary',
-            correctAnswer : 'd'
-        },
-    
-        {
-            question : 'What is the capital of Latvia?',
-            choiceA : 'Tallinn',
-            choiceB : 'Riga',
-            choiceC : 'Vilnius',
-            choiceD : 'Oslo',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'What is the capital of Belgium?',
-            choiceA : 'Brussels',
-            choiceB : 'Bern',
-            choiceC : 'Berlin',
-            choiceD : 'Bonn',
-            correctAnswer : 'a'
-        },
-    
-        {
-            question : 'Jerusalem is the capital of...',
-            choiceA : 'Egypt',
-            choiceB : 'Jordan',
-            choiceC : 'Israel',
-            choiceD : 'Lebanon',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Sweden?',
-            choiceA : 'Malmö',
-            choiceB : 'Göteborg',
-            choiceC : 'Uppsala',
-            choiceD : 'Stockholm',
-            correctAnswer : 'd'
-        },
-    
-        {
-            question : 'What is the capital of New Zealand?',
-            choiceA : 'Canberra',
-            choiceB : 'Wellington',
-            choiceC : 'Ottawa',
-            choiceD : 'Brisbane',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'Canberra is the capital of...',
-            choiceA : 'Monaco',
-            choiceB : 'Lichtenstein',
-            choiceC : 'Australia',
-            choiceD : 'Croatia',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'Yaoundé is the capital of...',
-            choiceA : 'Mali',
-            choiceB : 'Ghana',
-            choiceC : 'Congo',
-            choiceD : 'Cameroon',
-            correctAnswer : 'd'
-        },
-    ];
-    
-    let question = document.addElementById('question');
-    let choiceA = document.getElementById('choiceA');
-    let choiceB = document.getElementById('choiceB');
-    let choiceC = document.getElementById('choiceC');
-    let choiceD = document.getElementById('choiceD');
-
-    let runningQ = 0;
-    let q = questions[runningQ]; 
-
-    question.innerHTML = questions[runningQ].question[0];
-    choiceA.innerHTML = questions[runningQ].choiceA[0];
-    choiceB.innerHTML = questions[runningQ].choiceB[0];
-    choiceC.innerHTML = questions[runningQ].choiceC[0];
-    choiceD.innerHTML = questions[runningQ].choiceD[0];
-}*/
-
 /** This function gets the question from the array and deploys it in the frame.
  * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
  */
+
 function renderQuestion() {
     const questions = [
         {
@@ -704,27 +242,24 @@ function renderQuestion() {
 
 /*function nextQuestion() {
 
-    for (i = 0; i <= lastQuestion; i++){
-
+    if (let i = 0; i <= lastQuestion; i++) {
+        runningQuestion++;
+    } else {
+        nextButton.style.display = 'none';
     }
 
 }*/
 
-function checkAnswer(answer) {
+/*function checkAnswer(answer) {
 
-    let scores = document.getElementById('scores');
-    scores = 0;
+    let scores = 0;
 
     if (answer == questions[runningQuestion].correctAnswer){
         scores++
         scores.innerHTML = `${scores} + "/" + ${questions.length}`;
-        
+        document.getElementById(runningQuestion).style.backgroundColor = 'green';
     } else {
-
+        document.getElementById(runningQuestion).style.backgroundColor = 'red';
     }
 
-}
-
-function correctAnswer() {
-    
-}
+}*/
