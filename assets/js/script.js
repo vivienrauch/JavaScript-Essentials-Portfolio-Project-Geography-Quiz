@@ -361,6 +361,8 @@ let runningQ = 0;*/
     }
 };*/
 
+/** Greets the player and starts the game when they enter a usernamename.
+ * Gives an alert if no name is entered and not going to proceed to the game.*/
 
 function helloPlayer () {
 
@@ -372,19 +374,20 @@ function helloPlayer () {
         let userLogin = document.getElementById('user-login');
         userLogin.style.display= 'none';
         rules.style.display = 'none';
+        results.style.display = 'none';
         let quiz = document.getElementById('game-frame');
         quiz.classList.remove('hide');
 
         let welcomeMessage = document.getElementById('hidden-welcome');
         welcomeMessage.innerHTML = `Welcome ${username.value} ! Let's play!`;
-        startGame();
+        renderQuestion();
 
     }
 }
  }) 
 
 
-function startGame() {
+/*function startGame() {
 
     const questions = [
         {
@@ -530,29 +533,195 @@ function startGame() {
     let choiceD = document.getElementById('choiceD');
 
     let runningQ = 0;
-    let q = questions[runningQ];
+    let q = questions[runningQ]; 
 
     question.innerHTML = questions[runningQ].question[0];
     choiceA.innerHTML = questions[runningQ].choiceA[0];
     choiceB.innerHTML = questions[runningQ].choiceB[0];
     choiceC.innerHTML = questions[runningQ].choiceC[0];
     choiceD.innerHTML = questions[runningQ].choiceD[0];
+}*/
+
+/** This function gets the question from the array and deploys it in the frame.
+ * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
+ */
+function renderQuestion() {
+    const questions = [
+        {
+            question : 'What is the capital of Malawi?',
+            choiceA : 'Nairobi',
+            choiceB : 'Maputo',
+            choiceC : 'Lilongwe',
+            choiceD : 'Lusaka',
+            correctAnswer: 'd'
+        },
+    
+        {
+            question : 'Manila is the capital of...',
+            choiceA : 'Philippines',
+            choiceB : 'Afghanistan',
+            choiceC : 'Andorra',
+            choiceD : 'Mozambique',
+            correctAnswer: 'a'
+        },
+    
+        {
+            question : 'Vientiane is the capital of...',
+            choiceA : 'Thailand',
+            chocieB : 'Vietnam',
+            choiceC : 'Laos',
+            choiceD : 'Taiwan',
+            correctAnswer : 'c'
+        },
+    
+        {
+            question : 'What is the capital of Albania?',
+            chocieA : 'Bishkek',
+            choiceB : 'Sarajevo',
+            choiceC : 'Minsk',
+            choiceD : 'Tirana',
+            correctAnswer: 'd'
+        },
+    
+        {
+            question : 'What is the capital of Chile?',
+            chocieA : 'Lima',
+            choiceB : 'Santiago',
+            choiceC : 'Caracas',
+            choiceD : 'Quito',
+            correctAnswer : 'b'
+        },
+    
+        {
+            question : 'Montevideo is the capital of...',
+            choiceA : 'Cuba',
+            choiceB : 'Hawaii',
+            choiceC : 'Uruguay',
+            choiceD : 'Paraguay',
+            correctAnswer : 'c'
+        },
+    
+        {
+            question : 'What is the capital of Colombia?',
+            choiceA : 'Buenos Aires',
+            choiceB : 'Paramaribo',
+            choiceC : 'Bogotá',
+            choiceD : 'La Paz',
+            correctAnswer: 'c'
+        },
+    
+        {
+            question : 'Budapest is the capital of...',
+            choiceA : 'Romania',
+            choiceB : 'Iceland',
+            choiceC : 'Slovakia',
+            choiceD : 'Hungary',
+            correctAnswer : 'd'
+        },
+    
+        {
+            question : 'What is the capital of Latvia?',
+            choiceA : 'Tallinn',
+            choiceB : 'Riga',
+            choiceC : 'Vilnius',
+            choiceD : 'Oslo',
+            correctAnswer : 'b'
+        },
+    
+        {
+            question : 'What is the capital of Belgium?',
+            choiceA : 'Brussels',
+            choiceB : 'Bern',
+            choiceC : 'Berlin',
+            choiceD : 'Bonn',
+            correctAnswer : 'a'
+        },
+    
+        {
+            question : 'Jerusalem is the capital of...',
+            choiceA : 'Egypt',
+            choiceB : 'Jordan',
+            choiceC : 'Israel',
+            choiceD : 'Lebanon',
+            correctAnswer : 'c'
+        },
+    
+        {
+            question : 'What is the capital of Sweden?',
+            choiceA : 'Malmö',
+            choiceB : 'Göteborg',
+            choiceC : 'Uppsala',
+            choiceD : 'Stockholm',
+            correctAnswer : 'd'
+        },
+    
+        {
+            question : 'What is the capital of New Zealand?',
+            choiceA : 'Canberra',
+            choiceB : 'Wellington',
+            choiceC : 'Ottawa',
+            choiceD : 'Brisbane',
+            correctAnswer : 'b'
+        },
+    
+        {
+            question : 'Canberra is the capital of...',
+            choiceA : 'Monaco',
+            choiceB : 'Lichtenstein',
+            choiceC : 'Australia',
+            choiceD : 'Croatia',
+            correctAnswer : 'c'
+        },
+    
+        {
+            question : 'Yaoundé is the capital of...',
+            choiceA : 'Mali',
+            choiceB : 'Ghana',
+            choiceC : 'Congo',
+            choiceD : 'Cameroon',
+            correctAnswer : 'd'
+        },
+    ];
+
+    let question = document.getElementById('question');
+    let choiceA = document.getElementById('choiceA');
+    let choiceB = document.getElementById('choiceB');
+    let choiceC = document.getElementById('choiceC');
+    let choiceD = document.getElementById('choiceD');
+
+    const lastQuestion = questions.length - 1;
+    const runningQuestion = 0;
+
+    let q = questions[runningQuestion];
+
+    question.innerHTML = "<p>" + q.question + "</p>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+    choiceD.innerHTML = q.choiceD;
+
 }
 
-/** Greets the player and starts the game when they enter a usernamename.
- * Gives an alert if no name is entered and not going to proceed to the game.*/
+/*function nextQuestion() {
 
+    for (i = 0; i <= lastQuestion; i++){
 
-
-function nextQuestion() {
-    if (runningQ <= lastQuestion) {
-        runningQ++;
-    } else {
-        nextButton.style.display = 'none';
     }
-}
 
-function checkAnswer() {
+}*/
+
+function checkAnswer(answer) {
+
+    let scores = document.getElementById('scores');
+    scores = 0;
+
+    if (answer == questions[runningQuestion].correctAnswer){
+        scores++
+        scores.innerHTML = `${scores} + "/" + ${questions.length}`;
+        
+    } else {
+
+    }
 
 }
 
