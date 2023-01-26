@@ -152,7 +152,7 @@ hr {
     position: relative;
 }
 
-.fa-solid {
+#globe-icon {
     font-size: 150%;
     color: white;
     background-color:rgba(5, 85, 95, 0.8);
