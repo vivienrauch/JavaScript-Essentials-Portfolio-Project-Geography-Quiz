@@ -32,7 +32,6 @@ let results = document.getElementById('results-panel');*/
 
     rules.classList.remove('hide');
     results.style.display = 'none';
-    
 
     for (let button of startButton) {
         button.addEventListener('click', function() {
@@ -51,6 +50,9 @@ let results = document.getElementById('results-panel');*/
     for (let button of nextButton) {
         button.addEventListener('click', function () {
                 nextQuestion();
+                userLogin.style.display= 'none';
+                rules.style.display = 'none';
+                results.style.display = 'none';
         })
     }
 
@@ -72,7 +74,7 @@ function helloPlayer () {
         quiz.classList.remove('hide');
 
         let welcomeMessage = document.getElementById('hidden-welcome');
-        welcomeMessage.innerHTML = `Welcome ${username.value} ! Let's play!`;
+        welcomeMessage.innerHTML = `Welcome ${username.value}! Let's play!`;
         renderQuestion();
 
     }
@@ -240,23 +242,24 @@ function renderQuestion() {
 
 }
 
-/*function nextQuestion() {
+/*function nextQuestion(runningQuestion) {
 
-    if (let i = 0; i <= lastQuestion; i++) {
+    if (let i = 0; i <= questions.length; i++) {
         runningQuestion++;
     } else {
         nextButton.style.display = 'none';
+        results();
     }
-
 }*/
 
 /*function checkAnswer(answer) {
 
-    let scores = 0;
+    let scores = document.getElementById('scores');
+    let score = 0;
 
     if (answer == questions[runningQuestion].correctAnswer){
-        scores++
-        scores.innerHTML = `${scores} + "/" + ${questions.length}`;
+        score++
+        scores.innerHTML = `${score} + "/" + ${questions.length}`;
         document.getElementById(runningQuestion).style.backgroundColor = 'green';
     } else {
         document.getElementById(runningQuestion).style.backgroundColor = 'red';
