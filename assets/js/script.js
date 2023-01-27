@@ -11,25 +11,7 @@
 
 
 /* Load page and add listeners for clicking the start and next buttons or pressing Enter. */
-/* Adding variables */
-
-/*let question = document.addElementById('question');
-let choiceA = document.getElementById('choiceA');
-let choiceB = document.getElementById('choiceB');
-let choiceC = document.getElementById('choiceC');
-let choiceD = document.getElementById('choiceD');
-let scores = document.getElementById('scores');
-let quiz = document.getElementById('game-frame');
-let username = document.getElementById('username');
-let rules = document.getElementById('rules-panel');
-let results = document.getElementById('results-panel');*/
-
-
- document.addEventListener('DOMContentLoaded', function() {
-    let startButton = document.getElementsByClassName('start-game');
-    let rules = document.getElementById('rules-panel');
-    let results = document.getElementById('results-panel');
-
+document.addEventListener('DOMContentLoaded', function() {
     rules.classList.remove('hide');
     results.style.display = 'none';
 
@@ -81,19 +63,174 @@ function helloPlayer () {
 }
  }) 
 
+/* Adding variables */
+let startButton = document.getElementsByClassName('start-game');
+let rules = document.getElementById('rules-panel');
+let results = document.getElementById('results-panel');
+
+const questions = [
+    {
+        question : 'What is the capital of Malawi?',
+        choiceA : 'Nairobi',
+        choiceB : 'Maputo',
+        choiceC : 'Lilongwe',
+        choiceD : 'Lusaka',
+        correctAnswer: 'c'
+    },
+
+    {
+        question : 'Manila is the capital of...',
+        choiceA : 'Philippines',
+        choiceB : 'Afghanistan',
+        choiceC : 'Andorra',
+        choiceD : 'Mozambique',
+        correctAnswer: 'a'
+    },
+
+    {
+        question : 'Vientiane is the capital of...',
+        choiceA : 'Thailand',
+        choiceB : 'Vietnam',
+        choiceC : 'Laos',
+        choiceD : 'Taiwan',
+        correctAnswer : 'c'
+    },
+
+    {
+        question : 'What is the capital of Albania?',
+        chocieA : 'Bishkek',
+        choiceB : 'Sarajevo',
+        choiceC : 'Minsk',
+        choiceD : 'Tirana',
+        correctAnswer: 'd'
+    },
+
+    {
+        question : 'What is the capital of Chile?',
+        choiceA : 'Lima',
+        choiceB : 'Santiago',
+        choiceC : 'Caracas',
+        choiceD : 'Quito',
+        correctAnswer : 'b'
+    },
+
+    {
+        question : 'Montevideo is the capital of...',
+        choiceA : 'Cuba',
+        choiceB : 'Hawaii',
+        choiceC : 'Uruguay',
+        choiceD : 'Paraguay',
+        correctAnswer : 'c'
+    },
+
+    {
+        question : 'What is the capital of Colombia?',
+        choiceA : 'Buenos Aires',
+        choiceB : 'Paramaribo',
+        choiceC : 'Bogotá',
+        choiceD : 'La Paz',
+        correctAnswer: 'c'
+    },
+
+    {
+        question : 'Budapest is the capital of...',
+        choiceA : 'Romania',
+        choiceB : 'Iceland',
+        choiceC : 'Slovakia',
+        choiceD : 'Hungary',
+        correctAnswer : 'd'
+    },
+
+    {
+        question : 'What is the capital of Latvia?',
+        choiceA : 'Tallinn',
+        choiceB : 'Riga',
+        choiceC : 'Vilnius',
+        choiceD : 'Oslo',
+        correctAnswer : 'b'
+    },
+
+    {
+        question : 'What is the capital of Belgium?',
+        choiceA : 'Brussels',
+        choiceB : 'Bern',
+        choiceC : 'Berlin',
+        choiceD : 'Bonn',
+        correctAnswer : 'a'
+    },
+
+    {
+        question : 'Jerusalem is the capital of...',
+        choiceA : 'Egypt',
+        choiceB : 'Jordan',
+        choiceC : 'Israel',
+        choiceD : 'Lebanon',
+        correctAnswer : 'c'
+    },
+
+    {
+        question : 'What is the capital of Sweden?',
+        choiceA : 'Malmö',
+        choiceB : 'Göteborg',
+        choiceC : 'Uppsala',
+        choiceD : 'Stockholm',
+        correctAnswer : 'd'
+    },
+
+    {
+        question : 'What is the capital of New Zealand?',
+        choiceA : 'Canberra',
+        choiceB : 'Wellington',
+        choiceC : 'Ottawa',
+        choiceD : 'Brisbane',
+        correctAnswer : 'b'
+    },
+
+    {
+        question : 'Canberra is the capital of...',
+        choiceA : 'Monaco',
+        choiceB : 'Lichtenstein',
+        choiceC : 'Australia',
+        choiceD : 'Croatia',
+        correctAnswer : 'c'
+    },
+
+    {
+        question : 'Yaoundé is the capital of...',
+        choiceA : 'Mali',
+        choiceB : 'Ghana',
+        choiceC : 'Congo',
+        choiceD : 'Cameroon',
+        correctAnswer : 'd'
+    },
+];
+
+let scores = document.getElementById('scores');
+let score = 0;
+
+const lastQuestion = questions.length - 1;
+let runningQuestion = 0;
+
+let question = document.getElementById('question');
+let choiceA = document.getElementById('a');
+let choiceB = document.getElementById('b');
+let choiceC = document.getElementById('c');
+let choiceD = document.getElementById('d');
+
+
+
 /** This function gets the question from the array and deploys it in the frame.
  * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
  */
-
 function renderQuestion() {
-    const questions = [
+   /* const questions = [
         {
             question : 'What is the capital of Malawi?',
             choiceA : 'Nairobi',
             choiceB : 'Maputo',
             choiceC : 'Lilongwe',
             choiceD : 'Lusaka',
-            correctAnswer: 'd'
+            correctAnswer: 'c'
         },
     
         {
@@ -221,48 +358,50 @@ function renderQuestion() {
             choiceD : 'Cameroon',
             correctAnswer : 'd'
         },
-    ];
-
-    let question = document.getElementById('question');
-    let choiceA = document.getElementById('choiceA');
-    let choiceB = document.getElementById('choiceB');
-    let choiceC = document.getElementById('choiceC');
-    let choiceD = document.getElementById('choiceD');
-
-    const lastQuestion = questions.length - 1;
-    const runningQuestion = 0;
-
+    ];*/
     let q = questions[runningQuestion];
-
+    
     question.innerHTML = "<p>" + q.question + "</p>";
     choiceA.innerHTML = q.choiceA;
     choiceB.innerHTML = q.choiceB;
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
 
+    scores.innerHTML = `${score}/${questions.length}`;
 }
 
-/*function nextQuestion(runningQuestion) {
+/** Checks answer
+ * If the answer is correct:
+ * sets the background to green
+ * increments the score
+ * 
+ * If the answer is incorrect:
+ * sets the background to red
+ * 
+ * enables the next question button
+ */
+function checkAnswer(answer) {
 
-    if (let i = 0; i <= questions.length; i++) {
+    if (answer === questions[runningQuestion].correctAnswer){
+        score++;
+        scores.innerHTML = `${score}/${questions.length}`;
+        document.getElementsByClassName(runningQuestion).style.backgroundColor = "green";     
+    } else {       
+        scores.innerHTML = `${score}/${questions.length}`;
+        document.getElementsByClassName(runningQuestion).style.backgroundColor = "green";
+    }
+}
+
+    nextQuestion();
+
+
+/** Renders the next question and calls the results after the last */
+function nextQuestion() {
+
+    if (runningQuestion < lastQuestion) {
         runningQuestion++;
+        renderQuestion(runningQuestion); /**put this in the readme fixed bugs big tiiiiimeeeeeee */
     } else {
-        nextButton.style.display = 'none';
-        results();
+        results.classList.remove('hide');
     }
-}*/
-
-/*function checkAnswer(answer) {
-
-    let scores = document.getElementById('scores');
-    let score = 0;
-
-    if (answer == questions[runningQuestion].correctAnswer){
-        score++
-        scores.innerHTML = `${score} + "/" + ${questions.length}`;
-        document.getElementById(runningQuestion).style.backgroundColor = 'green';
-    } else {
-        document.getElementById(runningQuestion).style.backgroundColor = 'red';
-    }
-
-}*/
+}

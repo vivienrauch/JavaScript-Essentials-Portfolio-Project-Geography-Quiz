@@ -240,6 +240,8 @@ hr {
 .answer-text {
     font-family: 'Cinzel', serif;
     margin-left: 20px;
+    width: 100%;
+    text-align: left;
 }
 
 .scores {
