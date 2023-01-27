@@ -57,6 +57,7 @@ function helloPlayer () {
 
         let welcomeMessage = document.getElementById('hidden-welcome');
         welcomeMessage.innerHTML = `Welcome ${username.value}! Let's play!`;
+        runningQuestion = 0; /**put this in fixed bugs too! */
         renderQuestion();
 
     }
@@ -204,12 +205,12 @@ const questions = [
         correctAnswer : 'd'
     },
 ];
-
+let runningQuestion = 0;
 let scores = document.getElementById('scores');
 let score = 0;
 
 const lastQuestion = questions.length - 1;
-let runningQuestion = 0;
+
 
 let question = document.getElementById('question');
 let choiceA = document.getElementById('a');
@@ -217,148 +218,11 @@ let choiceB = document.getElementById('b');
 let choiceC = document.getElementById('c');
 let choiceD = document.getElementById('d');
 
-
-
 /** This function gets the question from the array and deploys it in the frame.
  * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
  */
 function renderQuestion() {
-   /* const questions = [
-        {
-            question : 'What is the capital of Malawi?',
-            choiceA : 'Nairobi',
-            choiceB : 'Maputo',
-            choiceC : 'Lilongwe',
-            choiceD : 'Lusaka',
-            correctAnswer: 'c'
-        },
     
-        {
-            question : 'Manila is the capital of...',
-            choiceA : 'Philippines',
-            choiceB : 'Afghanistan',
-            choiceC : 'Andorra',
-            choiceD : 'Mozambique',
-            correctAnswer: 'a'
-        },
-    
-        {
-            question : 'Vientiane is the capital of...',
-            choiceA : 'Thailand',
-            chocieB : 'Vietnam',
-            choiceC : 'Laos',
-            choiceD : 'Taiwan',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Albania?',
-            chocieA : 'Bishkek',
-            choiceB : 'Sarajevo',
-            choiceC : 'Minsk',
-            choiceD : 'Tirana',
-            correctAnswer: 'd'
-        },
-    
-        {
-            question : 'What is the capital of Chile?',
-            chocieA : 'Lima',
-            choiceB : 'Santiago',
-            choiceC : 'Caracas',
-            choiceD : 'Quito',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'Montevideo is the capital of...',
-            choiceA : 'Cuba',
-            choiceB : 'Hawaii',
-            choiceC : 'Uruguay',
-            choiceD : 'Paraguay',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Colombia?',
-            choiceA : 'Buenos Aires',
-            choiceB : 'Paramaribo',
-            choiceC : 'Bogotá',
-            choiceD : 'La Paz',
-            correctAnswer: 'c'
-        },
-    
-        {
-            question : 'Budapest is the capital of...',
-            choiceA : 'Romania',
-            choiceB : 'Iceland',
-            choiceC : 'Slovakia',
-            choiceD : 'Hungary',
-            correctAnswer : 'd'
-        },
-    
-        {
-            question : 'What is the capital of Latvia?',
-            choiceA : 'Tallinn',
-            choiceB : 'Riga',
-            choiceC : 'Vilnius',
-            choiceD : 'Oslo',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'What is the capital of Belgium?',
-            choiceA : 'Brussels',
-            choiceB : 'Bern',
-            choiceC : 'Berlin',
-            choiceD : 'Bonn',
-            correctAnswer : 'a'
-        },
-    
-        {
-            question : 'Jerusalem is the capital of...',
-            choiceA : 'Egypt',
-            choiceB : 'Jordan',
-            choiceC : 'Israel',
-            choiceD : 'Lebanon',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'What is the capital of Sweden?',
-            choiceA : 'Malmö',
-            choiceB : 'Göteborg',
-            choiceC : 'Uppsala',
-            choiceD : 'Stockholm',
-            correctAnswer : 'd'
-        },
-    
-        {
-            question : 'What is the capital of New Zealand?',
-            choiceA : 'Canberra',
-            choiceB : 'Wellington',
-            choiceC : 'Ottawa',
-            choiceD : 'Brisbane',
-            correctAnswer : 'b'
-        },
-    
-        {
-            question : 'Canberra is the capital of...',
-            choiceA : 'Monaco',
-            choiceB : 'Lichtenstein',
-            choiceC : 'Australia',
-            choiceD : 'Croatia',
-            correctAnswer : 'c'
-        },
-    
-        {
-            question : 'Yaoundé is the capital of...',
-            choiceA : 'Mali',
-            choiceB : 'Ghana',
-            choiceC : 'Congo',
-            choiceD : 'Cameroon',
-            correctAnswer : 'd'
-        },
-    ];*/
     let q = questions[runningQuestion];
     
     question.innerHTML = "<p>" + q.question + "</p>";
@@ -381,14 +245,19 @@ function renderQuestion() {
  * enables the next question button
  */
 function checkAnswer(answer) {
-
+    let answers = document.getElementsByClassName('answers');
     if (answer === questions[runningQuestion].correctAnswer){
         score++;
         scores.innerHTML = `${score}/${questions.length}`;
-        document.getElementsByClassName(runningQuestion).style.backgroundColor = "green";     
+        
+        for (let right of answers) {
+            right.style.backgroundColor = "green"; 
+        }    
     } else {       
         scores.innerHTML = `${score}/${questions.length}`;
-        document.getElementsByClassName(runningQuestion).style.backgroundColor = "green";
+        for (let wrong of answers) {
+            wrong.style.backgroundColor = "red";  
+        }
     }
 }
 
@@ -397,10 +266,11 @@ function checkAnswer(answer) {
 
 /** Renders the next question and calls the results after the last */
 function nextQuestion() {
-
+    
     if (runningQuestion < lastQuestion) {
         runningQuestion++;
-        renderQuestion(runningQuestion); /**put this in the readme fixed bugs big tiiiiimeeeeeee */
+        renderQuestion(runningQuestion);
+        /**put this in the readme fixed bugs big tiiiiimeeeeeee */
     } else {
         results.classList.remove('hide');
     }
