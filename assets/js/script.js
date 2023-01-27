@@ -246,13 +246,14 @@ function renderQuestion() {
  */
 function checkAnswer(answer) {
     let answers = document.getElementsByClassName('answers');
+    
     if (answer === questions[runningQuestion].correctAnswer){
         score++;
         scores.innerHTML = `${score}/${questions.length}`;
         
-        for (let right of answers) {
-            right.style.backgroundColor = "green"; 
-        }    
+       for (answer of answers) {
+            answer.style.backgroundColor = "green"; 
+        }
     } else {       
         scores.innerHTML = `${score}/${questions.length}`;
         for (let wrong of answers) {
