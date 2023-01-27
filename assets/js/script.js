@@ -35,8 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 userLogin.style.display= 'none';
                 rules.style.display = 'none';
                 results.style.display = 'none';
+                correct.style.display = 'none';
+                wrong.style.display = 'none';
         })
     }
+
 
 /** Greets the player and starts the game when they enter a usernamename.
  * Gives an alert if no name is entered and not going to proceed to the game.*/
@@ -45,6 +48,7 @@ function helloPlayer () {
 
     if (username.value == "") {
         alert('Please enter your name to start the game!');
+        
         return false;
 
     } else {
@@ -52,6 +56,8 @@ function helloPlayer () {
         userLogin.style.display= 'none';
         rules.style.display = 'none';
         results.style.display = 'none';
+        correct.style.display = 'none';
+        wrong.style.display = 'none';
         let quiz = document.getElementById('game-frame');
         quiz.classList.remove('hide');
 
@@ -68,6 +74,8 @@ function helloPlayer () {
 let startButton = document.getElementsByClassName('start-game');
 let rules = document.getElementById('rules-panel');
 let results = document.getElementById('results-panel');
+let correct = document.getElementById('correct');
+let wrong = document.getElementById('wrong');
 
 const questions = [
     {
@@ -232,6 +240,8 @@ function renderQuestion() {
     choiceD.innerHTML = q.choiceD;
 
     scores.innerHTML = `${score}/${questions.length}`;
+    correct.style.display = 'none';
+    wrong.style.display = 'none';
 }
 
 /** Checks answer
@@ -245,22 +255,18 @@ function renderQuestion() {
  * enables the next question button
  */
 function checkAnswer(answer) {
-    let answers = document.getElementsByClassName('answers');
-    
+      
     if (answer === questions[runningQuestion].correctAnswer){
         score++;
         scores.innerHTML = `${score}/${questions.length}`;
-        
-       for (answer of answers) {
-            answer.style.backgroundColor = "green"; 
-        }
+        correct.style.display = 'flex';
+
     } else {       
         scores.innerHTML = `${score}/${questions.length}`;
-        for (let wrong of answers) {
-            wrong.style.backgroundColor = "red";  
-        }
+        wrong.style.display = 'flex';
     }
 }
+
 
     nextQuestion();
 
