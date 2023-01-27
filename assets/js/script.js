@@ -230,7 +230,7 @@ let choiceD = document.getElementById('d');
  * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
  */
 function renderQuestion() {
-    
+   
     let q = questions[runningQuestion];
     
     question.innerHTML = "<p>" + q.question + "</p>";
@@ -245,13 +245,8 @@ function renderQuestion() {
 }
 
 /** Checks answer
- * If the answer is correct:
- * sets the background to green
+ * validates the answer
  * increments the score
- * 
- * If the answer is incorrect:
- * sets the background to red
- * 
  * enables the next question button
  */
 function checkAnswer(answer) {
@@ -260,23 +255,29 @@ function checkAnswer(answer) {
         score++;
         scores.innerHTML = `${score}/${questions.length}`;
         correct.style.display = 'flex';
+                    
 
     } else {       
         scores.innerHTML = `${score}/${questions.length}`;
         wrong.style.display = 'flex';
+                
     }
+    
 }
 
 
-    nextQuestion();
+
+    
+   
 
 
 /** Renders the next question and calls the results after the last */
 function nextQuestion() {
-    
+
     if (runningQuestion < lastQuestion) {
         runningQuestion++;
         renderQuestion(runningQuestion);
+        
         /**put this in the readme fixed bugs big tiiiiimeeeeeee */
     } else {
         results.classList.remove('hide');
