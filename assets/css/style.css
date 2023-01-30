@@ -288,6 +288,10 @@ hr {
     padding-left: 10px;
 }
 
+.answers .disabled {
+    pointer-events: none;
+}
+
 #next-question {
     cursor: pointer;
 }

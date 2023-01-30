@@ -74,7 +74,7 @@ let rules = document.getElementById('rules-panel');
 let results = document.getElementById('results-panel');
 let correct = document.getElementById('correct');
 let wrong = document.getElementById('wrong');
-
+let answersContainer = document.getElementsByClassName('answers');
 const questions = [
     {
         question : 'What is the capital of Malawi?',
@@ -228,7 +228,7 @@ let choiceD = document.getElementById('d');
  * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
  */
 function renderQuestion() {
-
+    
     let q = questions[runningQuestion];
     
     question.innerHTML = "<p>" + q.question + "</p>";
@@ -241,59 +241,41 @@ function renderQuestion() {
 
 }
 
+
+
 /** Checks answer
  * validates the answer
  * increments the score
- * enables the next question button
  */
 function checkAnswer(answer) {
-      
+     
     if (answer === questions[runningQuestion].correctAnswer){
         score += 1;
         scores.innerHTML = `${score}/${questions.length}`;
         correct.style.display = 'flex';
-        wrong.style.display = 'none';             
-
+        wrong.style.display = 'none';
+        console.log('Correct answer')  
+        
     } else {       
         scores.innerHTML = `${score}/${questions.length}`;
         wrong.style.display = 'flex';
-        correct.style.display = 'none'; 
+        correct.style.display = 'none';
+        console.log('Incorrect answer'); 
     }
-
-    if (questions[runningQuestion].correctAnswer){
-        score += 0;
-        let answers = document.getElementsByClassName('answer-text');
-        for (let i = 0; i < answers; i++){
-            answers[i].oncick = '';
-        }
-    }
-
-   /* for (runningQuestion of questions){ 
-    if (score += 1){
-        score =+ 0;
-        runningQuestion.onclick = '';
-        runningQuestion.onclick = '';
-        runningQuestion.choiceC.onclick = '';
-        runningQuestion.choiceD.onclick = '';
-    }
-    }*/
+   
+    alreadyAnswered();
 }
 
-
-
-/*let answers = document.getElementsByClassName('answer-text');
-    answers.addEventListener('click', function(){
-        for (let i = 0; i < answers.length; i++){
-        checkAnswer();
-        answers[i].onclick = '';
-        };
-        
-        });*/
-
+function alreadyAnswered(){
+    const answersLength = answersContainer.children.length;
+    for (let i = 0; i < answersLength; i++){
+        answersContainer.children[i].classList.add('disabled');
+    }
+}
 
 /** Renders the next question and calls the results after the last */
 function nextQuestion() {
-
+    
     if (runningQuestion < lastQuestion) {
         runningQuestion++;
         renderQuestion(runningQuestion);
@@ -312,4 +294,6 @@ function nextQuestion() {
         score = 0;
         runningQuestion = 0;
         renderQuestion();
-    })
+        correct.style.display = 'none';
+        wrong.style.display = 'none';
+        })
