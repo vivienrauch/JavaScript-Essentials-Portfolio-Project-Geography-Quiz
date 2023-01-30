@@ -1,11 +1,11 @@
 /** functions to add:
  * say hello to the player when they enter their name + press enter or click the start button - done
- * show only one question at a time
+ * show only one question at a time - done
  * only one click allowed
  * highlight the background with green if it's correct and with red if it's incorrect 
  * add a next question icon - done
- * increment the score if the answer is correct
- * logo resets game and scores
+ * increment the score if the answer is correct - done
+ * logo resets game and scores - done
  * alert/pop-up window at the end with the total scores + message
  */
 
@@ -56,8 +56,6 @@ function helloPlayer () {
         userLogin.style.display= 'none';
         rules.style.display = 'none';
         results.style.display = 'none';
-        correct.style.display = 'none';
-        wrong.style.display = 'none';
         let quiz = document.getElementById('game-frame');
         quiz.classList.remove('hide');
 
@@ -107,7 +105,7 @@ const questions = [
 
     {
         question : 'What is the capital of Albania?',
-        chocieA : 'Bishkek',
+        choiceA : 'Bishkek',
         choiceB : 'Sarajevo',
         choiceC : 'Minsk',
         choiceD : 'Tirana',
@@ -230,7 +228,7 @@ let choiceD = document.getElementById('d');
  * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
  */
 function renderQuestion() {
-   
+
     let q = questions[runningQuestion];
     
     question.innerHTML = "<p>" + q.question + "</p>";
@@ -240,8 +238,7 @@ function renderQuestion() {
     choiceD.innerHTML = q.choiceD;
 
     scores.innerHTML = `${score}/${questions.length}`;
-    correct.style.display = 'none';
-    wrong.style.display = 'none';
+
 }
 
 /** Checks answer
@@ -252,23 +249,46 @@ function renderQuestion() {
 function checkAnswer(answer) {
       
     if (answer === questions[runningQuestion].correctAnswer){
-        score++;
+        score += 1;
         scores.innerHTML = `${score}/${questions.length}`;
         correct.style.display = 'flex';
-                    
+        wrong.style.display = 'none';             
 
     } else {       
         scores.innerHTML = `${score}/${questions.length}`;
         wrong.style.display = 'flex';
-                
+        correct.style.display = 'none'; 
     }
-    
+
+    if (questions[runningQuestion].correctAnswer){
+        score += 0;
+        let answers = document.getElementsByClassName('answer-text');
+        for (let i = 0; i < answers; i++){
+            answers[i].oncick = '';
+        }
+    }
+
+   /* for (runningQuestion of questions){ 
+    if (score += 1){
+        score =+ 0;
+        runningQuestion.onclick = '';
+        runningQuestion.onclick = '';
+        runningQuestion.choiceC.onclick = '';
+        runningQuestion.choiceD.onclick = '';
+    }
+    }*/
 }
 
 
 
-    
-   
+/*let answers = document.getElementsByClassName('answer-text');
+    answers.addEventListener('click', function(){
+        for (let i = 0; i < answers.length; i++){
+        checkAnswer();
+        answers[i].onclick = '';
+        };
+        
+        });*/
 
 
 /** Renders the next question and calls the results after the last */
@@ -277,9 +297,19 @@ function nextQuestion() {
     if (runningQuestion < lastQuestion) {
         runningQuestion++;
         renderQuestion(runningQuestion);
+        wrong.style.display = 'none';
+        correct.style.display = 'none';
+        
         
         /**put this in the readme fixed bugs big tiiiiimeeeeeee */
     } else {
         results.classList.remove('hide');
     }
 }
+
+/** Reset Game */
+    document.getElementById('logo-img').addEventListener('click', function(){
+        score = 0;
+        runningQuestion = 0;
+        renderQuestion();
+    })
