@@ -18,11 +18,31 @@ The objective while creating this multiple choice quiz game was to utilize HTML,
 
 - Logo
 
+![logo](docs/logo.png)
+![logo-hover](docs/logo-hover.png)
+
 - User area
+
+![user](docs/user.png)
+![user-hover](docs/user-hover.png)
+
+- Rules
+
+![rules](docs/rules.png)
 
 - Game area
 
+![game](docs/game.png)
+
+- Results
+
+![results](docs/results.png)
+![results-hover](docs/results-hover.png)
+
 - Footer
+
+![social](docs/social.png)
+![social-hover](docs/social-hover.png)
 
 ### **Future Features**
 
@@ -38,30 +58,54 @@ I went for the aesthetics of an antique environment, like an old ship where sail
 
 ### **Fonts**
 
-I chose the **Amatic SC** and the **Cinzel** font sizes for this page. The **Amatic SC** has a little playfulness in it which complements and eases up the dominant color palette that could turn too heavy with an equally dominant font style. However, I found that it kind of disappears when I put it in the game area or on the Start button. I needed something that pops a little more, and that's when I decided to use **Cinzel** for these elements.
+I chose the **Amatic SC**, **Cinzel** and **Crimson Text** font families for this page. The **Amatic SC** has a little playfulness in it which complements and eases up the dominant color palette that could turn too heavy with an equally dominant font style. However, I found that it kind of disappears when I put it in the game area or on the Start button. I needed something that pops a little more, and that's when I decided to use **Cinzel**for these elements and **Crimson Text** for the rules and results.
 I imported them from [Google Fonts](https://fonts.google.com/).
 
 # **Testing**
 
 - Accessibility & Performance
+    - Lighthouse:
+
+    ![lighthouse](docs/pp2Lighthouse.png)
 
 - Validator Testing
 
 **HTML**
 
+![html-validation](docs/html-validation.png)
+
 **CSS**
 
 **JavaScript**
+
+![js-validation](docs/javascript-validation.png)
 
 # **Bugs**
 
 ## **Fixed Bugs**
 
-    The game didn't start when a username is entered.
+- The game didn't start when a username is entered.
+    - **Fix**: Calling the *renderQuestion* function and setting the *runningQuestion* to 0, so it starts with the first question.
+    
+    ![starting-game](docs/game-no-start-solve.png)
 
-**Fix**:
+- When the next button was clicked, the next question didn't get rendered.
+    - **Fix**: It wasn't enough to just increment the questions and call the *renderQuestion* function, but inside the brackets   it needed the *runningQuestion* specification.
+
+    ![next-question](docs/next-question-no-load-solve.png)
+
+- The hardest one to solve in this project was to only allow one click per question.
+    - **Fix**: I needed to find a way to reference all the answers, loop through them and disable the clicking after one click and then enable it again for the next question. So I created a variable that targets all the answers' class, I looped through them and added a class with *pointer-events: none;* and in the *nextQuestion* function I removed the class so it enabled clicking again.
+
+    ![one-click](docs/one-click-solve.png)
+
+    
 
 ## **Unfixed Bugs**
+
+My original idea was to color the background of the correct answer green and to color the background of the wrong answer red. For some reason I couldn't make it work properly, so I went with the alternative of showing the validation under the options.
+
+![correct-answer](docs/correct-answer.png)
 
 # **Development**
 
@@ -91,6 +135,7 @@ You can get up and running by:
     - [Pexels](https.//pexels.com/) for the images
     - [Font Awesome](https://fontawesome.com/) for the icons used throughout the site
     - [Box Shadow Generator](https://cssgenerator.org/box-shadow-css-generator.html) for adding dynamics to the buttons
+    - [favicon.io](https://favicon.io/favicon-converter/) to create a favicon
 
 # **Deployment** - *Surface plane*
 

@@ -14,14 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let button of startButton) {
         button.addEventListener('click', function() {
                 helloPlayer();
-        })
+        });
     }
 
     document.getElementById('username').addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             helloPlayer();
         }
-    })
+    });
 
     let nextButton = document.getElementById('next-question');
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 results.style.display = 'none';
                 correct.style.display = 'none';
                 wrong.style.display = 'none';
-        })
+        });
     }
 
 
@@ -55,12 +55,12 @@ function helloPlayer () {
 
         let welcomeMessage = document.getElementById('hidden-welcome');
         welcomeMessage.innerHTML = `Welcome ${username.value}! Let's play!`;
-        runningQuestion = 0; /**put this in fixed bugs too! */
+        runningQuestion = 0;
         renderQuestion();
 
     }
 }
- }) 
+ }); 
 
 /* Adding variables */
 let startButton = document.getElementsByClassName('start-game');
@@ -278,7 +278,7 @@ function nextQuestion() {
     if (runningQuestion < lastQuestion) {
         runningQuestion++;
         renderQuestion(runningQuestion);
-        /**put this in the readme fixed bugs big tiiiiimeeeeeee */
+
     } else {
         results.style.display = 'flex';
         quiz.classList.add('hide');
