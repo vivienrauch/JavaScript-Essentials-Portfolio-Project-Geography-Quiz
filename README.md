@@ -6,6 +6,8 @@ This is a fun game where the user can match countries with their capitals.
 
 ## Repository
 
+https://github.com/vivienrauch/JavaScript-Essentials-Portfolio-Project-Geography-Quiz
+
 # UX Design
 
 ## **Objective** - *Stragety Plane*
@@ -19,8 +21,6 @@ The objective while creating this multiple choice quiz game was to utilize HTML,
 - Logo
 
 The logo clarifies the type of game right from the get go. I wanted to add some functionality to it, so when the user clicks the logo, it resets the game. I added some shadow to it when the user hovers over it so it indicates for them that it's a clickable feature.
-
-![logo](docs/logo.png)
 
 ![logo-hover](docs/logo-hover.png)
 
