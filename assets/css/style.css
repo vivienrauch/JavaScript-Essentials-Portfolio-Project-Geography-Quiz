@@ -401,5 +401,341 @@ footer {
 
 /* for larger and medium screen size from 1280px wide and down */
 @media screen and (max-width: 1280px){
-    
+    #rules-panel h3 {
+        margin-top: 35px;
+    }
+
+    .questions {
+        font-size: 109%;
+    }
+
+    #game-frame {
+        font-size: 110%;
+    }
+
+    .scores {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+}
+
+@media screen and (max-width: 1235px){
+    .answers-container {
+        margin-left: 30px;
+    }
+
+    .questions {
+        margin-left: 30px;
+    }
+
+    .scores {
+        margin-left: 30px
+    }
+}
+
+@media screen and (max-width: 1170px){
+    .scores {
+        padding-left: 16px;
+        padding-right: 15ox;
+    }
+}
+
+@media screen and (max-width: 1120px){
+    #globe-icon {
+        margin-top: 5px;
+    }
+
+    .questions {
+        margin-left: 32px;
+    }
+
+    .answers-container {
+        margin-left: 32px;
+    }
+
+    .scores {
+        margin-left: 32px;
+        padding-left: 17px;
+    }
+
+    #game-frame {
+        width: 40%
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .scores {
+        margin-left: 30px;
+    }
+
+    .answers-container {
+        margin-left: 30px;
+    }
+
+    .questions {
+        margin-left: 30px;
+    }
+
+    #game-frame {
+        width: 44%;
+    }
+}
+
+@media screen and (max-width: 936px){
+    #rules-panel p {
+        font-size: 110%;
+    }
+
+    #globe-icon {
+        margin-top: 12px;
+    }
+
+}
+
+@media screen and (max-width: 873px) {
+    #globe-icon {
+        margin-top: 2px;
+    }
+
+    #rules {
+        margin-top: 30px;
+    }
+
+    #intro-user {
+        height: 165px;
+    }
+
+    #logo-area {
+        width: 40%;
+    }
+
+    #circle-frame {
+        width: 200px;
+        height: 200px;
+    }
+
+    #intro {
+        font-size: 140%;
+    }
+
+    #username {
+        font-size: 120%;
+    }
+
+    label {
+        font-size: 115%;
+    }
+
+    #game-frame {
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 833px;) {
+    .start-game {
+        height: 45px;
+        width: 80px;
+        font-size: 110%;
+    }
+
+    #intro-user {
+        height: 155px;
+    }
+
+    #rules-panel {
+        width: 40%;
+    }
+
+    #globe-icon {
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    #rules-panel div {
+        justify-content: center;
+    }
+
+    #rules-panel h3 {
+        margin-top: 0px;
+        font-size: 120%;
+    }
+
+    #game-frame {
+        width: 50%;
+        font-size: 105%;
+    }
+
+    #scores {
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    #game-frame {
+        width: 53%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #game-frame {
+        font-size: 100%;
+        width: 58%;
+    }
+}
+
+@media screen and (max-width: 642px) {
+    #rules-panel {
+        width: 53%;
+    }
+
+    #logo-area {
+        width: 45%;
+    }
+
+    #game-frame {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    #logo-area {
+        width: 50%;
+    }
+
+    #rules-panel {
+        width: 58%;
+    }
+
+    #game-frame {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    #logo-area {
+        width: 60%;
+    }
+
+    #game-frame {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    #rules-panel {
+        width: 62%;
+    }
+
+    #rules-panel p {
+        font-size: 100%;
+    }
+
+    #rules-panel h3 {
+        font-size: 110%;
+    }
+
+    #globe-icon {
+        font-size: 140%;
+        padding: 12px;
+        margin-top: 15px;
+    }
+
+    #logo-area {
+        width: 70%;
+    }
+
+    #intro {
+        font-size: 130%;
+    }
+
+    #username {
+        font-size: 110%;
+    }
+
+    #game-frame {
+        width: 100%;
+        font-size: 95%;
+    }
+
+    .scores {
+        padding-right: 13px;
+    }
+
+    #hidden-welcome {
+        font-size: 120%;
+    }
+
+    #results-panel {
+        width: 63%;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    #logo-area {
+        width: 80%;
+    }
+
+    #rules-panel {
+        width: 75%;
+        align-items: center;
+    }
+
+    #intro {
+        font-size: 122%;
+    }
+
+    #username {
+        font-size: 100%;
+    }
+
+    label {
+        font-size: 110%;
+    }
+
+    #intro-user {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 318px) {
+    #logo-area {
+        width: 90%;
+    }
+
+    #circle-frame {
+        width: 190px;
+        height: 190px;
+    }    
+}
+
+@media screen and (max-width: 282px) {
+    #rules-panel p {
+        font-size: 85%;
+    }
+
+    #intro-user {
+        height: 200px;
+    }
+
+    #rules-panel h3 {
+        font-size: 100%;
+        padding: 15px;
+    }
+
+    .scores {
+        margin-left: 18px;
+        padding-left: 12px;
+    }
+
+    .answers-container {
+        margin-left: 18px;
+    }
+
+    .questions {
+        margin-left: 18px;
+    }
+
+    #results-panel {
+        width: 80%;
+    }
 }
