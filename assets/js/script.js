@@ -74,7 +74,6 @@ let rules = document.getElementById('rules-panel');
 let results = document.getElementById('results-panel');
 let correct = document.getElementById('correct');
 let wrong = document.getElementById('wrong');
-let answersContainer = document.getElementsByClassName('answers');
 const questions = [
     {
         question : 'What is the capital of Malawi?',
@@ -224,6 +223,8 @@ let choiceB = document.getElementById('b');
 let choiceC = document.getElementById('c');
 let choiceD = document.getElementById('d');
 
+let allAnswers = document.getElementsByClassName('answer-text');
+
 /** This function gets the question from the array and deploys it in the frame.
  * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
  */
@@ -253,36 +254,37 @@ function checkAnswer(answer) {
         score += 1;
         scores.innerHTML = `${score}/${questions.length}`;
         correct.style.display = 'flex';
-        wrong.style.display = 'none';
-        console.log('Correct answer')  
+        wrong.style.display = 'none'; 
+        console.log('Correct answer');
         
+
     } else {       
         scores.innerHTML = `${score}/${questions.length}`;
         wrong.style.display = 'flex';
-        correct.style.display = 'none';
-        console.log('Incorrect answer'); 
+        correct.style.display = 'none';       
+        console.log('Incorrect answer');              
+    }   
+
+    for (let i = 0; i < allAnswers.length; i++){
+    allAnswers[i].classList.add('disabled');
     }
-   
-    alreadyAnswered();
 }
 
-function alreadyAnswered(){
-    const answersLength = answersContainer.children.length;
-    for (let i = 0; i < answersLength; i++){
-        answersContainer.children[i].classList.add('disabled');
-    }
-}
+
+
 
 /** Renders the next question and calls the results after the last */
 function nextQuestion() {
-    
+    wrong.style.display = 'none';
+    correct.style.display = 'none';
+
+    for (let i = 0; i < allAnswers.length; i++){
+        allAnswers[i].classList.remove('disabled');
+        }
+
     if (runningQuestion < lastQuestion) {
         runningQuestion++;
         renderQuestion(runningQuestion);
-        wrong.style.display = 'none';
-        correct.style.display = 'none';
-        
-        
         /**put this in the readme fixed bugs big tiiiiimeeeeeee */
     } else {
         results.classList.remove('hide');

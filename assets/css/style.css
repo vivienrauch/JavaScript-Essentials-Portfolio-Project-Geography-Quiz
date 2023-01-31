@@ -288,7 +288,7 @@ hr {
     padding-left: 10px;
 }
 
-.answers .disabled {
+.disabled {
     pointer-events: none;
 }
 
