@@ -1,15 +1,3 @@
-/** functions to add:
- * say hello to the player when they enter their name + press enter or click the start button - done
- * show only one question at a time - done
- * only one click allowed
- * highlight the background with green if it's correct and with red if it's incorrect 
- * add a next question icon - done
- * increment the score if the answer is correct - done
- * logo resets game and scores - done
- * alert/pop-up window at the end with the total scores + message
- */
-
-
 /* Load page and add listeners for clicking the start and next buttons or pressing Enter. */
 document.addEventListener('DOMContentLoaded', function() {
     rules.classList.remove('hide');
@@ -51,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /** Greets the player and starts the game when they enter a usernamename.
  * Gives an alert if no name is entered and not going to proceed to the game.*/
-
 function helloPlayer () {
 
     if (username.value == "") {
@@ -82,6 +69,7 @@ let quiz = document.getElementById('game-frame');
 let results = document.getElementById('results-panel');
 let correct = document.getElementById('correct');
 let wrong = document.getElementById('wrong');
+
 const questions = [
     {
         question : 'What is the capital of Malawi?',
@@ -218,13 +206,13 @@ const questions = [
         correctAnswer : 'd'
     },
 ];
+
 let runningQuestion = 0;
 let scores = document.getElementById('scores');
 let score = 0;
 let totalScore = document.getElementById('total-score');
 
 const lastQuestion = questions.length - 1;
-
 
 let question = document.getElementById('question');
 let choiceA = document.getElementById('a');
@@ -250,8 +238,6 @@ function renderQuestion() {
     scores.innerHTML = `${score}/${questions.length}`;
 
 }
-
-
 
 /** Checks answer
  * validates the answer
@@ -279,10 +265,7 @@ function checkAnswer(answer) {
     }
 }
 
-
-
-
-/** Renders the next question and calls the results after the last */
+/* Renders the next question and calls the results after the last */
 function nextQuestion() {
     
     wrong.style.display = 'none';
@@ -303,8 +286,9 @@ function nextQuestion() {
     }
 }
 
-/* Reset game */
 
+
+/* Reset game */
 function resetGame(){
     score = 0;
     runningQuestion = 0;

@@ -33,6 +33,7 @@
     </section>
     <!--Rules, game & results area-->
     <section id="game-panel">
+        <!--Rules section-->
         <section id="rules-panel" class="hide">
             <div>
                 <h3>Rules</h3>
@@ -46,6 +47,7 @@
                 <p> <i class="fa-solid fa-earth-europe" id="globe-icon"></i> </p>   
             </div>
         </section>
+        <!--Game section-->
         <div id="game-frame" class="hide">
             <div class="questions" id="question"></div>
             <div class="answers-container">
@@ -62,6 +64,7 @@
                     <p class="answer-text" id="d" onclick="checkAnswer('d')"></p>
                 </div>
             </div>
+            <!--Shows scores and next question button-->
             <div class="scores" id="scoresAndNext">
                 <p id="scores"></p>
                 <p id="correct" class="hide">Correct!  <i class="fa-solid fa-circle-check" id="green"></i></p>
@@ -69,6 +72,7 @@
                 <p id="next-question"> <i class="fa-solid fa-chevron-right" onclick="nextQuestion()"></i></p>
             </div>
         </div>
+        <!--Results section-->
        <section id="results-panel" class="hide">
             <div>    
                 <h2>Congrats!</h2>
