@@ -124,7 +124,6 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*justify-content: center;*/
 }
 
 #rules-panel h3 {
@@ -305,7 +304,7 @@ hr {
 
 #results-panel {
     width: 33%;
-    height: 88%;
+    height: 58%;
     margin: 0 auto;
     position: relative;
     
@@ -314,6 +313,54 @@ hr {
     font-size: 120%;
     color: #3a3a3a;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#results-panel div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#results-panel p {
+    font-size: 150%;
+    font-weight: 250%;
+}
+
+#results-panel h3 {
+    font-size: 120%;
+    font-family: 'Cinzel', cursive;
+    text-transform: uppercase;
+    background-color:rgba(5, 85, 95, 0.8);
+    color: #fafafa;
+    padding: 17px;
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+#play-again {
+    font-family: 'Cinzel', serif;
+    background-color: #fafafa;
+    color: #3a3a3a;
+    border-radius: 40px;
+    width: 120px;
+    height: 50px;
+    font-size: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+
+#play-again:hover {
+    background-color: #05555f;
+    color: #fafafa;
+    cursor: pointer;
+    box-shadow: 0 0.1rem 1.1rem 0;
+    transform: scale(1.01);
+    transform: transform 100ms;
 }
 
 /* Social Section */

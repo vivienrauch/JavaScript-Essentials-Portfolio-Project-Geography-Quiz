@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     rules.classList.remove('hide');
     results.style.display = 'none';
 
+    document.getElementById('play-again').addEventListener('click', function(){
+        resetGame();
+    });
+    
+    document.getElementById('logo-img').addEventListener('click', function(){
+            resetGame();
+            });
+
     for (let button of startButton) {
         button.addEventListener('click', function() {
                 helloPlayer();
@@ -56,7 +64,6 @@ function helloPlayer () {
         userLogin.style.display= 'none';
         rules.style.display = 'none';
         results.style.display = 'none';
-        let quiz = document.getElementById('game-frame');
         quiz.classList.remove('hide');
 
         let welcomeMessage = document.getElementById('hidden-welcome');
@@ -71,6 +78,7 @@ function helloPlayer () {
 /* Adding variables */
 let startButton = document.getElementsByClassName('start-game');
 let rules = document.getElementById('rules-panel');
+let quiz = document.getElementById('game-frame');
 let results = document.getElementById('results-panel');
 let correct = document.getElementById('correct');
 let wrong = document.getElementById('wrong');
@@ -213,6 +221,7 @@ const questions = [
 let runningQuestion = 0;
 let scores = document.getElementById('scores');
 let score = 0;
+let totalScore = document.getElementById('total-score');
 
 const lastQuestion = questions.length - 1;
 
@@ -275,6 +284,7 @@ function checkAnswer(answer) {
 
 /** Renders the next question and calls the results after the last */
 function nextQuestion() {
+    
     wrong.style.display = 'none';
     correct.style.display = 'none';
 
@@ -287,15 +297,22 @@ function nextQuestion() {
         renderQuestion(runningQuestion);
         /**put this in the readme fixed bugs big tiiiiimeeeeeee */
     } else {
-        results.classList.remove('hide');
+        results.style.display = 'flex';
+        quiz.classList.add('hide');
+        totalScore.innerHTML = `You got ${score}/${questions.length} right!`;
     }
 }
 
-/** Reset Game */
-    document.getElementById('logo-img').addEventListener('click', function(){
-        score = 0;
-        runningQuestion = 0;
-        renderQuestion();
-        correct.style.display = 'none';
-        wrong.style.display = 'none';
-        })
+/* Reset game */
+
+
+function resetGame(){
+    score = 0;
+    runningQuestion = 0;
+    renderQuestion();
+    correct.style.display = 'none';
+    wrong.style.display = 'none';
+    quiz.classList.remove('hide');
+    rules.style.display = 'none';
+    results.style.display = 'none';
+}
