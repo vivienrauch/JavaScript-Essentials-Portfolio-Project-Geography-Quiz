@@ -396,3 +396,10 @@ footer {
     transform: scale(1.11);
     transform: transform 100ms;
 }
+
+/* Media queries */
+
+/* for larger and medium screen size from 1280px wide and down */
+@media screen and (max-width: 1280px){
+    
+}
