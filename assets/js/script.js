@@ -305,7 +305,6 @@ function nextQuestion() {
 
 /* Reset game */
 
-
 function resetGame(){
     score = 0;
     runningQuestion = 0;

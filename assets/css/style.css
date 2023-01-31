@@ -324,18 +324,16 @@ hr {
 }
 
 #results-panel p {
-    font-size: 150%;
+    font-family: 'Crimson Text', serif;
+    font-size: 120%;
     font-weight: 250%;
 }
 
-#results-panel h3 {
+#results-panel h2 {
     font-size: 120%;
-    font-family: 'Cinzel', cursive;
+    font-family: 'Cinzel', serif;
     text-transform: uppercase;
-    background-color:rgba(5, 85, 95, 0.8);
-    color: #fafafa;
-    padding: 17px;
-    border-radius: 50px;
+    color: #3a3a3a;
     margin-bottom: 15px;
 }
 
@@ -361,6 +359,13 @@ hr {
     box-shadow: 0 0.1rem 1.1rem 0;
     transform: scale(1.01);
     transform: transform 100ms;
+}
+
+#cheers {
+    font-size: 150%;
+    color: #05555f;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Social Section */
