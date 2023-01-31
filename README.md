@@ -18,28 +18,42 @@ The objective while creating this multiple choice quiz game was to utilize HTML,
 
 - Logo
 
+The logo clarifies the type of game right from the get go. I wanted to add some functionality to it, so when the user clicks the logo, it resets the game. I added some shadow to it when the user hovers over it so it indicates for them that it's a clickable feature.
+
 ![logo](docs/logo.png)
+
 ![logo-hover](docs/logo-hover.png)
 
 - User area
 
+Here the user enters their name. The game only starts if the user enters their name, if not, they will get an alert.
+
 ![user](docs/user.png)
+
 ![user-hover](docs/user-hover.png)
 
 - Rules
+
+When the user hasn't entered the game yet this is the section they meet first, where they can read about how the game works.
 
 ![rules](docs/rules.png)
 
 - Game area
 
+Once the user entered their name, this is the first question they will see. The answer options pop out when they hover over them. Below the options the user can see how many answers have they got right from all the questions. On the right side there is the next button which can function as a skip button as well.
+
 ![game](docs/game.png)
 
 - Results
+
+Once the user completed the quiz, they will be navigated to this page where they can see their final results and start a new game if they wish.
 
 ![results](docs/results.png)
 ![results-hover](docs/results-hover.png)
 
 - Footer
+
+This section contains social links for the game developer's theoretical other games and gaming community.
 
 ![social](docs/social.png)
 ![social-hover](docs/social-hover.png)
@@ -49,6 +63,10 @@ The objective while creating this multiple choice quiz game was to utilize HTML,
 In the future I'd like to improve this game by adding either new windows or tabs where the user can choose the continent they want to play with and provide more questions to each continent accordingly.
 
 ### **Wireframes**
+
+I was going for an intuitive and straightforward design with not too many options or stimulation.
+
+![balsamiq](docs/balsamiq-mockup.png)
 
 ### **Colors**
 
