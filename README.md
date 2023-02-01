@@ -4,6 +4,10 @@ This is a fun game where the user can match countries with their capitals.
 
 ## Live Site
 
+![amiresponsive-js](docs/amiresponsive-js.png)
+
+https://vivienrauch.github.io/JavaScript-Essentials-Portfolio-Project-Geography-Quiz/
+
 ## Repository
 
 https://github.com/vivienrauch/JavaScript-Essentials-Portfolio-Project-Geography-Quiz
