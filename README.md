@@ -73,8 +73,6 @@ Here the user enters their name. The game only starts if the user enters their n
 
 ![user](docs/user.png)
 
-![user-hover](docs/user-hover.png)
-
 - Rules
 
 When the user hasn't entered the game yet this is the section they meet first, where they can read about how the game works.
@@ -83,7 +81,7 @@ When the user hasn't entered the game yet this is the section they meet first, w
 
 - Game area
 
-Once the user entered their name, this is the first question they will see. The answer options pop out when they hover over them. Below the options the user can see how many answers have they got right from all the questions. On the right side there is the next button which can function as a skip button as well.
+Once the user entered their name, this is the first question they will see. The answer options pop out when they hover over them. Below the options the user can see how many answers they have got right from all the questions. On the right side there is the next button which can function as a skip button as well.
 
 ![game](docs/game.png)
 
@@ -103,12 +101,12 @@ This section contains social links for the game developer's theoretical other ga
 
 ### **Future Features**
 
-In the future I'd like to improve this game by adding either new windows or tabs where the user can choose the continent they want to play with and provide more questions to each continent accordingly; also to add the green and red background to the corresponding options. To game in that scope I'd also add registration and a log out functionality.
+In the future I'd like to improve this game by adding either new windows or tabs where the user can choose the continent they want to play with and provide more questions to each continent accordingly; also to add the green and red background to the corresponding options. To a game in that scope I'd also add registration and log out functionality.
 Overall, I'd find a way to not use global variables and thus make the game more secure.
 
 ### **Colors**
 
-I went for the aesthetics of an antique environment, like an old ship where sailors are looking at the map over an old wooden table in the dark with only a couple of candles providing light. I imagined earthy colors which represent our lands with a touch of blue which represents our seas and oceans. I found a picture on Pinterest that matched the vibe I was looking for and I pretty much went with its color palette.
+I went for the aesthetics of an antique environment, like an old ship where sailors are looking at the map of the world over an old wooden table in the dark with only a couple of candles providing light. I imagined earthy colors which represent our lands with a touch of blue which represents our seas and oceans. I found a picture on Pinterest that matched the vibe I was looking for and I pretty much went with its color palette.
 
 ![color-palette](docs/color-vibe.jpg)
 
