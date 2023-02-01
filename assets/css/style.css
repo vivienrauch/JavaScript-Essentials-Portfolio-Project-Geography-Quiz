@@ -326,7 +326,6 @@ hr {
 #results-panel p {
     font-family: 'Crimson Text', serif;
     font-size: 120%;
-    font-weight: 250%;
 }
 
 #results-panel h2 {
@@ -436,7 +435,7 @@ footer {
 @media screen and (max-width: 1170px){
     .scores {
         padding-left: 16px;
-        padding-right: 15ox;
+        padding-right: 15px;
     }
 }
 
@@ -531,7 +530,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 833px;) {
+@media screen and (max-width: 833px) {
     .start-game {
         height: 45px;
         width: 80px;
