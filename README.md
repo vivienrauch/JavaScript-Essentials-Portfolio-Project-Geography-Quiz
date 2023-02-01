@@ -200,7 +200,7 @@ You can get up and running by:
 
 I deployed the site to GitHub pages and the steps were the following:
 
-- In [my repository](https://github.com/vivienrauch/HTML-CSS-Essentials-Portfolio-Project-Book-Club), I navigated to **Settings**
+- In [my repository](https://github.com/vivienrauch/JavaScript-Essentials-Portfolio-Project-Geography-Quiz), I navigated to **Settings**
 - In **Settings**, I navigated to **Pages**
 - From the source section I selected "**main**"
 - Clicked on "**Save**" and the page provided me with the following live link after deployment:
