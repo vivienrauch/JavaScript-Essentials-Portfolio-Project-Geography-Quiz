@@ -133,7 +133,9 @@ The HTML validation shows no error, only one warning with a section lacking head
 
 ### **CSS**
 
-(the jigsaw validator doesn't work)
+The CSS validator returned no errors.
+
+![css-validation](docs/css-validation.png)
 
 ### **JavaScript**
 

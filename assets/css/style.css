@@ -41,7 +41,6 @@ body {
 #logo-img:hover {
     box-shadow: 0 0.2rem 1.2rem 0;
     transform: scale(1.02);
-    transform: transform 100ms;
     cursor: pointer;
 }
 
@@ -90,7 +89,6 @@ hr {
     cursor: pointer;
     box-shadow: 0 0.1rem 1.1rem 0;
     transform: scale(1.01);
-    transform: transform 100ms;
 }
 
 #hidden-welcome {
@@ -228,7 +226,7 @@ hr {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 #05555f;
     transform: scale(1.02);
-    transform: transform 100ms; /* Transform code inspired by a Youtube tutorial: https://www.youtube.com/watch?v=f4fB9Xg2JEY */
+ /* Transform code inspired by a Youtube tutorial: https://www.youtube.com/watch?v=f4fB9Xg2JEY */
 }
 
 #answer-one {
@@ -297,7 +295,6 @@ hr {
 
 #next-question:hover {
     transform: scale(1.11);
-    transform: transform 100ms;
 }
 
 /* Results area */
@@ -357,7 +354,6 @@ hr {
     cursor: pointer;
     box-shadow: 0 0.1rem 1.1rem 0;
     transform: scale(1.01);
-    transform: transform 100ms;
 }
 
 #cheers {
@@ -393,7 +389,6 @@ footer {
 .social a:hover{
     color: #05555f;
     transform: scale(1.11);
-    transform: transform 100ms;
 }
 
 
