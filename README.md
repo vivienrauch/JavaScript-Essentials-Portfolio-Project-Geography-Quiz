@@ -8,13 +8,56 @@ This is a fun game where the user can match countries with their capitals.
 
 https://github.com/vivienrauch/JavaScript-Essentials-Portfolio-Project-Geography-Quiz
 
+# Table of Contents
+
+- [UX Design](#ux-design)
+    * [Objective](#objective---stragety-plane)
+        * [User Stories](#user-stories)
+    * [Features](#features---scope-skeleton--structure-plane)
+        * [Wireframes](#wireframes)
+        * [Existing Features](#existing-features)
+        * [Future Features](#future-features)
+        * [Colors](#colors)
+        * [Fonts](#fonts)
+- [Testing](#testing)
+    * [Accessibility & Performance](#accessibility--performance)
+    * [Validator Testing](#validator-testing)
+        * [HTML](#html)
+        * [CSS](#css)
+        * [JavaScript](#javascript)
+* [Bugs](#bugs)
+    * [Fixed Bugs](#fixed-bugs)
+    * [Unfixed Bugs](#unfixed-bugs)
+* [Development](#development)
+* [Technologies Used](#technologies-used)
+* [Deployment](#deployment---surface-plane)
+* [Credits](#credits)
+
+
 # UX Design
 
 ## **Objective** - *Stragety Plane*
 
 The objective while creating this multiple choice quiz game was to utilize HTML, CSS and JavaScript in order to build a simple and intuitive game while providing pleasing aesthetics, interactivity and a dynamic flow for the user.
 
+### **User Stories**
+
+As a user, I:
+- want to arrive to a page that feels like 'home'
+- want to be able to easily navigate the page
+- want to see colors that are not too straining for the eye
+- want to understand the game rules without the need to read extensive amounts of text
+- want to be able to see how many questions I got right from how many questions
+- want to be able to skip the question if I can't/don't want to answer
+- want to be able to see the final results and have the option to play again
+
 ## **Features** - *Scope, skeleton & structure plane*
+
+### **Wireframes**
+
+I was going for an intuitive and straightforward and clear design with not too many options or stimulation.
+
+![balsamiq](docs/balsamiq-mockup.png)
 
 ### **Existing Features**
 
@@ -60,13 +103,8 @@ This section contains social links for the game developer's theoretical other ga
 
 ### **Future Features**
 
-In the future I'd like to improve this game by adding either new windows or tabs where the user can choose the continent they want to play with and provide more questions to each continent accordingly.
-
-### **Wireframes**
-
-I was going for an intuitive and straightforward design with not too many options or stimulation.
-
-![balsamiq](docs/balsamiq-mockup.png)
+In the future I'd like to improve this game by adding either new windows or tabs where the user can choose the continent they want to play with and provide more questions to each continent accordingly; also to add the green and red background to the corresponding options. To game in that scope I'd also add registration and a log out functionality.
+Overall, I'd find a way to not use global variables and thus make the game more secure.
 
 ### **Colors**
 
@@ -81,20 +119,27 @@ I imported them from [Google Fonts](https://fonts.google.com/).
 
 # **Testing**
 
-- Accessibility & Performance
-    - Lighthouse:
+## **Accessibility & Performance**
+
+- Lighthouse:
 
     ![lighthouse](docs/pp2Lighthouse.png)
 
-- Validator Testing
+## Validator Testing
 
-**HTML**
+### **HTML**
+
+The HTML validation shows no error, only one warning with a section lacking heading - which was intented and thus needs no correction.
 
 ![html-validation](docs/html-validation.png)
 
-**CSS**
+### **CSS**
 
-**JavaScript**
+(the jigsaw validator doesn't work)
+
+### **JavaScript**
+
+The JavaScript validator returned no errors, only warnings mostly stemming from the usage of global variables.
 
 ![js-validation](docs/javascript-validation.png)
 
@@ -115,9 +160,7 @@ I imported them from [Google Fonts](https://fonts.google.com/).
 - The hardest one to solve in this project was to only allow one click per question.
     - **Fix**: I needed to find a way to reference all the answers, loop through them and disable the clicking after one click and then enable it again for the next question. So I created a variable that targets all the answers' class, I looped through them and added a class with *pointer-events: none;* and in the *nextQuestion* function I removed the class so it enabled clicking again.
 
-    ![one-click](docs/one-click-solve.png)
-
-    
+    ![one-click](docs/one-click-solve.png)   
 
 ## **Unfixed Bugs**
 
