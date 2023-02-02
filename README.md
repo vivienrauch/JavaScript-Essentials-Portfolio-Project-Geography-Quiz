@@ -106,7 +106,6 @@ Once the user entered their name, this is the first question they will see. The 
 Once the user completed the quiz, they will be navigated to this page where they can see their final results and start a new game if they wish.
 
 ![results](docs/results.png)
-![results-hover](docs/results-hover.png)
 
 - Footer
 
