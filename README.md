@@ -173,7 +173,7 @@ My original idea was to color the background of the correct answer green and to 
 
 ![correct-answer](docs/correct-answer.png)
 
-An other issue that occurred and I haven't succeeded to figure out the reason of was the results panel appearing in a selected mode on the page, and the user has to click for it to unselect.
+An other issue that occurred and I haven't succeeded to figure out the reason of was the results panel appearing in a selected mode on the page, and the user has to click somewhere on the page for it to unselect.
 
 ![select-issue-results](docs/selected-known-issue.png)
 
