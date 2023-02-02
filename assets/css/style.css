@@ -91,18 +91,18 @@ hr {
     transform: scale(1.01);
 }
 
-#continue-game {
+#reset-questions {
     font-family: 'Cinzel', serif;
     background-color: #fafafa;
     color: #3a3a3a;
     border-radius: 40px;
-    width: 130px;
+    width: 90px;
     height: 50px;
     font-size: 120%;
     margin-top: 28px;
 }
 
-#continue-game:hover {
+#reset-questions:hover {
     background-color: #05555f;
     color: #fafafa;
     cursor: pointer;

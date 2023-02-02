@@ -16,13 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
             return false; 
         } else {
 
-            let continueButton = document.getElementById('continue-game');
-            continueButton.classList.remove('hide');
-            continueButton.addEventListener('click', function(){
+            let resetQuestions = document.getElementById('reset-questions');
+            resetQuestions.classList.remove('hide');
+            resetQuestions.addEventListener('click', function(){
             resetGame();
             quiz.classList.remove('hide');
             rules.style.display = 'none';
-            continueButton.style.display = 'none';
             });
 
             rules.style.display = 'flex';
@@ -249,7 +248,7 @@ let allAnswers = document.getElementsByClassName('answer-text');
  * These lines of code are inspired by this tutorial: https://youtu.be/49pYIMygIcU
  */
 function renderQuestion() {
-    
+
     let q = questions[runningQuestion];
     
     question.innerHTML = "<p>" + q.question + "</p>";
