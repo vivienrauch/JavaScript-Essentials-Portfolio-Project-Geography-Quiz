@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             rules.style.display = 'flex';
             quiz.classList.add('hide');
+            results.style.display = 'none';
 
             welcomeMessage.style.display = 'none';
             
