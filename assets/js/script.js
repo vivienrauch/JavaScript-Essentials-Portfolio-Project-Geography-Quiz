@@ -1,4 +1,6 @@
 /* Load page and add listeners for clicking the start and next buttons or pressing Enter. */
+/*jshint esversion: 6 */
+
 document.addEventListener('DOMContentLoaded', function() {
     rules.classList.remove('hide');
     results.style.display = 'none';
@@ -13,9 +15,22 @@ document.addEventListener('DOMContentLoaded', function() {
             
             return false; 
         } else {
+
+            let continueButton = document.getElementById('continue-game');
+            continueButton.classList.remove('hide');
+            continueButton.addEventListener('click', function(){
             resetGame();
-        }
+            quiz.classList.remove('hide');
+            rules.style.display = 'none';
             });
+
+            rules.style.display = 'flex';
+            quiz.classList.add('hide');
+
+            welcomeMessage.style.display = 'none';
+            
+            }
+        });
 
     for (let button of startButton) {
         button.addEventListener('click', function() {
@@ -59,7 +74,6 @@ function helloPlayer () {
         results.style.display = 'none';
         quiz.classList.remove('hide');
 
-        let welcomeMessage = document.getElementById('hidden-welcome');
         welcomeMessage.innerHTML = `Welcome ${username.value}! Let's play!`;
         runningQuestion = 0;
         renderQuestion();
@@ -72,6 +86,7 @@ function helloPlayer () {
 let startButton = document.getElementsByClassName('start-game');
 let rules = document.getElementById('rules-panel');
 let quiz = document.getElementById('game-frame');
+let welcomeMessage = document.getElementById('hidden-welcome');
 let results = document.getElementById('results-panel');
 let correct = document.getElementById('correct');
 let wrong = document.getElementById('wrong');
@@ -241,7 +256,7 @@ function renderQuestion() {
     choiceC.innerHTML = q.choiceC;
     choiceD.innerHTML = q.choiceD;
 
-    scores.innerHTML = `${score}/${questions.length}`;
+    scores.innerHTML = `Scored: ${score}/${questions.length}`;
 
 }
 
