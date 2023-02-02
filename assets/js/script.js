@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
             resetGame();
             quiz.classList.remove('hide');
             rules.style.display = 'none';
+            continueButton.style.display = 'none';
             });
 
             rules.style.display = 'flex';
