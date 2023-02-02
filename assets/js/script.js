@@ -4,11 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
     results.style.display = 'none';
 
     document.getElementById('play-again').addEventListener('click', function(){
-        resetGame();
+       resetGame();
     });
     
     document.getElementById('logo-img').addEventListener('click', function(){
+        if (username.value == "") {
+            alert('Please enter your name to start the game!');
+            
+            return false; 
+        } else {
             resetGame();
+        }
             });
 
     for (let button of startButton) {
